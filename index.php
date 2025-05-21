@@ -6,12 +6,15 @@ include './init.php';
     <head>
         <meta charset="UTF-8">
         <title>Virtuelle Postkarte</title>
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill_2.0.3.css">
+        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill_snow_1.3.7.css">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/main.css">
-
+        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill-emoji_0.1.7.css">
+        
         <script src="<?= getBaseUrl() ?>js/lib/jquery-3.7.1.min.js"></script>
-        <script src="<?= getBaseUrl() ?>js/lib/quill_2.0.3.js"></script>
+        <script src="<?= getBaseUrl() ?>js/lib/quill_1.3.7.min.js"></script>
         <script src="<?= getBaseUrl() ?>js/lib/html2canvas_1.4.1.min.js"></script>
+        <script src="<?= getBaseUrl() ?>js/lib/quill-emoji_0.1.7.js"></script>
+        <script src="<?= getBaseUrl() ?>js/main.js"></script>
     </head>
     <body>
 
