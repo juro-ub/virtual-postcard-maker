@@ -88,6 +88,11 @@ $(document).ready(function () {
         updatePreview();
         uploadAndGetLink(link => window.open(`https://t.me/share/url?text=Hier ist meine Postkarte: ${link}`, '_blank'));
     });
+
+    $('#bg-select-text').change(function () {
+        const value = $(this).val();
+        $('#message-preview').css('background-color', value);
+    });
     
     makeDraggable(document.getElementById("message-preview"));
 });

@@ -35,6 +35,9 @@ body {
     left: 30px;
     cursor: move;
     user-select: none;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button {

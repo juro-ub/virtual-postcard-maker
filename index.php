@@ -23,13 +23,21 @@ include './init.php';
             <div class="editor-wrapper">
                 <label>Nachricht:</label>
                 <div id="editor"></div>
-                <label>Hintergrund auswählen:</label>
+                <label>Hintergrundbild auswählen:</label>
                 <select id="bg-select">
                     <option value="strand_1200x800.jpg">Strand</option>
                     <option value="geburtstag_1200x800.jpg">Geburtstag</option>
                     <option value="herzen_1200x800.jpg">Herzen</option>
                     <option value="katze_1200x800.jpg">Katze</option>
                     <option value="winter_1200x800.jpg">Winter</option>
+                </select>
+                <label for="bg-select-text">Text-Hintergrund:</label>
+                <select id="bg-select-text">
+                    <option value="transparent">Kein Hintergrund</option>
+                    <option value="white">Weiß</option>
+                    <option value="rgba(255,255,255,0.8)">Weiß (transparent)</option>
+                    <option value="rgba(0,0,0,0.5)">Dunkel (transparent)</option>
+                    <option value="#fdf6e3">Beige</option>
                 </select>
                 <button id="save">Speichern</button>
                 <button id="share-ws">WhatsApp</button>
