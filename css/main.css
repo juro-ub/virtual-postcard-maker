@@ -28,16 +28,15 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 #message-preview {
     position: absolute;
     top: 30px;
     left: 30px;
-    right: 30px;
-    bottom: 30px;
-    color: black;
-    font-size: 20px;
-    overflow: auto;
+    cursor: move;
+    user-select: none;
 }
+
 button {
     margin-right: 10px;
 }

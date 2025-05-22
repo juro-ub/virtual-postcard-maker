@@ -14,9 +14,50 @@ $(document).ready(function () {
         }
     });
 
+    quill.on('text-change', function() {
+        updatePreview();
+    });
+
     $('#bg-select').change(function () {
         $('#bg-image').attr('src', 'assets/hintergruende/' + $(this).val());
     });
+
+    function makeDraggable(el, containerSelector = '#postcard') {
+        const container = document.querySelector(containerSelector);
+        let pos = {x: 0, y: 0, left: 0, top: 0};
+
+        el.onmousedown = function (e) {
+            e.preventDefault();
+            pos.x = e.clientX;
+            pos.y = e.clientY;
+            pos.left = el.offsetLeft;
+            pos.top = el.offsetTop;
+
+            document.onmousemove = function (e) {
+                let dx = e.clientX - pos.x;
+                let dy = e.clientY - pos.y;
+
+                // Berechne neue Position
+                let newLeft = pos.left + dx;
+                let newTop = pos.top + dy;
+
+                // Begrenzung auf Container
+                const maxLeft = container.clientWidth - el.clientWidth;
+                const maxTop = container.clientHeight - el.clientHeight;
+
+                newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+                newTop = Math.max(0, Math.min(newTop, maxTop));
+
+                el.style.left = newLeft + "px";
+                el.style.top = newTop + "px";
+            };
+
+            document.onmouseup = function () {
+                document.onmousemove = null;
+                document.onmouseup = null;
+            };
+        };
+    }
 
     function updatePreview() {
         $('#message-preview').html(quill.root.innerHTML);
@@ -47,4 +88,6 @@ $(document).ready(function () {
         updatePreview();
         uploadAndGetLink(link => window.open(`https://t.me/share/url?text=Hier ist meine Postkarte: ${link}`, '_blank'));
     });
+    
+    makeDraggable(document.getElementById("message-preview"));
 });
