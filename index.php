@@ -22,7 +22,9 @@ include './init.php';
             <h1>Virtuelle Postkarte erstellen</h1>
             <div class="editor-wrapper">
                 <label>Nachricht:</label>
-                <div id="editor"></div>
+                <div id="editor"></div>                
+            </div>
+            <div>
                 <label>Hintergrundbild auswählen:</label>
                 <select id="bg-select">
                     <option value="strand_1200x800.jpg">Strand</option>
@@ -39,7 +41,7 @@ include './init.php';
                     <option value="rgba(0,0,0,0.5)">Dunkel (transparent)</option>
                     <option value="#fdf6e3">Beige</option>
                 </select>
-                <button id="save">Speichern</button>
+                <button id="add-textbox">➕Textfeld hinzufügen</button>
                 <button id="share-ws">WhatsApp</button>
                 <button id="share-tg">Telegram</button>
                 <button onclick="window.print()">Drucken</button>

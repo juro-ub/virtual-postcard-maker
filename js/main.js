@@ -1,5 +1,6 @@
 let quill;
 $(document).ready(function () {
+    let selectedBox = null;
     quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
@@ -14,8 +15,10 @@ $(document).ready(function () {
         }
     });
 
-    quill.on('text-change', function() {
-        updatePreview();
+    quill.on('text-change', function () {
+        if (selectedBox) {
+            selectedBox.innerHTML = quill.root.innerHTML;
+        }
     });
 
     $('#bg-select').change(function () {
@@ -60,6 +63,7 @@ $(document).ready(function () {
     }
 
     function updatePreview() {
+        alert("f");
         $('#message-preview').html(quill.root.innerHTML);
     }
 
@@ -74,11 +78,6 @@ $(document).ready(function () {
         });
     }
 
-    $('#save').click(() => {
-        updatePreview();
-        uploadAndGetLink(link => alert('Gespeichert unter: ' + link));
-    });
-
     $('#share-ws').click(() => {
         updatePreview();
         uploadAndGetLink(link => window.open(`https://wa.me/?text=Hier ist meine Postkarte: ${link}`, '_blank'));
@@ -92,6 +91,41 @@ $(document).ready(function () {
     $('#bg-select-text').change(function () {
         const value = $(this).val();
         $('#message-preview').css('background-color', value);
+    });
+    
+    $(document).on('click', '.text-box', function (e) {
+        e.stopPropagation();
+        $('.text-box').removeClass('selected');
+        $(this).addClass('selected');
+
+        selectedBox = this;
+        quill.root.innerHTML = selectedBox.innerHTML;
+        $('#editor-panel').show();
+    });
+    
+    let textBoxCounter = 0;
+
+    $('#add-textbox').click(function () {
+        textBoxCounter++;
+
+        const newBox = $(`<div class="text-box" contenteditable="false">${quill.root.innerHTML}</div>`);
+
+        newBox.css({
+            top: 50 + textBoxCounter * 20 + 'px',
+            left: 50 + textBoxCounter * 20 + 'px'
+        });
+
+        $('#postcard').append(newBox);
+        makeDraggable(newBox[0]);
+
+        // automatisch auswählen + in Quill laden
+        selectedBox = newBox[0];
+        quill.root.innerHTML = selectedBox.innerHTML;
+        $('#editor-panel').show();
+    });
+    
+    $('#editor-wrapper').on('click', function (e) {
+        e.stopPropagation(); // ← verhindert Deselect!
     });
     
     makeDraggable(document.getElementById("message-preview"));

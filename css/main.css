@@ -43,3 +43,18 @@ body {
 button {
     margin-right: 10px;
 }
+
+.text-box {
+    position: absolute;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    cursor: move;
+    font-size: 18px;
+    max-width: 400px;
+    user-select: none;
+}
+
+.text-box.selected {
+    outline: 2px dashed #555;
+}
