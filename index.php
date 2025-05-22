@@ -49,7 +49,6 @@ include './init.php';
             <div id="preview-wrapper">
                 <div id="postcard">
                     <img id="bg-image" src="assets/hintergruende/strand_1200x800.jpg" />
-                    <div id="message-preview"></div>
                 </div>
             </div>
         </div>

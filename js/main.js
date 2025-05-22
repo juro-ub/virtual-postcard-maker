@@ -62,11 +62,6 @@ $(document).ready(function () {
         };
     }
 
-    function updatePreview() {
-        alert("f");
-        $('#message-preview').html(quill.root.innerHTML);
-    }
-
     function uploadAndGetLink(callback) {
         html2canvas(document.querySelector("#postcard")).then(canvas => {
             canvas.toBlob(blob => {
@@ -79,18 +74,18 @@ $(document).ready(function () {
     }
 
     $('#share-ws').click(() => {
-        updatePreview();
         uploadAndGetLink(link => window.open(`https://wa.me/?text=Hier ist meine Postkarte: ${link}`, '_blank'));
     });
 
     $('#share-tg').click(() => {
-        updatePreview();
         uploadAndGetLink(link => window.open(`https://t.me/share/url?text=Hier ist meine Postkarte: ${link}`, '_blank'));
     });
 
     $('#bg-select-text').change(function () {
         const value = $(this).val();
-        $('#message-preview').css('background-color', value);
+        if (selectedBox) {
+            $(selectedBox).css('background-color', value);
+        }
     });
     
     $(document).on('click', '.text-box', function (e) {
@@ -127,6 +122,4 @@ $(document).ready(function () {
     $('#editor-wrapper').on('click', function (e) {
         e.stopPropagation(); // ← verhindert Deselect!
     });
-    
-    makeDraggable(document.getElementById("message-preview"));
 });
