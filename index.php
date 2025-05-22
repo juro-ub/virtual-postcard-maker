@@ -25,8 +25,11 @@ include './init.php';
                 <div id="editor"></div>
                 <label>Hintergrund auswählen:</label>
                 <select id="bg-select">
-                    <option value="strand.jpg">Strand</option>
-                    <option value="geburtstag.jpg">Geburtstag</option>
+                    <option value="strand_1200x800.jpg">Strand</option>
+                    <option value="geburtstag_1200x800.jpg">Geburtstag</option>
+                    <option value="herzen_1200x800.jpg">Herzen</option>
+                    <option value="katze_1200x800.jpg">Katze</option>
+                    <option value="winter_1200x800.jpg">Winter</option>
                 </select>
                 <button id="save">Speichern</button>
                 <button id="share-ws">WhatsApp</button>
@@ -35,7 +38,7 @@ include './init.php';
             </div>
             <div id="preview-wrapper">
                 <div id="postcard">
-                    <img id="bg-image" src="assets/hintergruende/strand.jpg" />
+                    <img id="bg-image" src="assets/hintergruende/strand_1200x800.jpg" />
                     <div id="message-preview"></div>
                 </div>
             </div>
