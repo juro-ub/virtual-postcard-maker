@@ -58,3 +58,24 @@ button {
 .text-box.selected {
     outline: 2px dashed #555;
 }
+
+.text-box .delete-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #666;
+    z-index: 10;
+}
+
+.text-box .delete-btn:hover {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+}

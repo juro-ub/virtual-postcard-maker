@@ -17,7 +17,8 @@ $(document).ready(function () {
 
     quill.on('text-change', function () {
         if (selectedBox) {
-            selectedBox.innerHTML = quill.root.innerHTML;
+            // NUR den .text-content updaten, nicht die ganze Box
+            $(selectedBox).find('.text-content').html(quill.root.innerHTML);
         }
     });
 
@@ -92,9 +93,10 @@ $(document).ready(function () {
         e.stopPropagation();
         $('.text-box').removeClass('selected');
         $(this).addClass('selected');
-
         selectedBox = this;
-        quill.root.innerHTML = selectedBox.innerHTML;
+
+        const html = $(selectedBox).find('.text-content').html();
+        quill.root.innerHTML = html;
     });
     
     let textBoxCounter = 0;
@@ -102,19 +104,35 @@ $(document).ready(function () {
     $('#add-textbox').click(function () {
         textBoxCounter++;
 
-        const newBox = $(`<div class="text-box" contenteditable="false">${quill.root.innerHTML}</div>`);
+        const contentHTML = quill.root.innerHTML;
+        
+        // Dann Box anlegen, mit getrenntem Content-Container
+        const newBox = $(`
+        <div class="text-box" contenteditable="false">
+          <div class="text-content"></div>
+          <div class="delete-btn">×</div>
+        </div>
+        `);
+
+        // Content reinpacken
+        newBox.find('.text-content').html(contentHTML);
 
         newBox.css({
             top: 50 + textBoxCounter * 20 + 'px',
             left: 50 + textBoxCounter * 20 + 'px'
         });
+        
+        
 
         $('#postcard').append(newBox);
         makeDraggable(newBox[0]);
 
         // automatisch auswählen + in Quill laden
         selectedBox = newBox[0];
-        quill.root.innerHTML = selectedBox.innerHTML;
+        $('.text-box').removeClass('selected');
+        newBox.addClass('selected');
+
+        quill.root.innerHTML = contentHTML;
     });
     
     $('.editor-wrapper, .ql-toolbar').on('click', function (e) {
@@ -130,7 +148,18 @@ $(document).ready(function () {
         if ($(e.target).closest('.text-box, .editor-wrapper, .ql-toolbar, #editor').length === 0) {
             // nur optisch abwählen, selectedBox-Referenz bleibt erhalten
             $('.text-box').removeClass('selected');
-            // selectedBox = null;  ← entferne diese Zeile
         }
     });
+    
+    $(document).on('click', '.text-box .delete-btn', function (e) {
+        e.stopPropagation();               // verhindert Deselektion
+        const box = $(this).closest('.text-box');
+        // falls das gelöschte Feld gerade aktiv war, reset selectedBox
+        if (box[0] === selectedBox) {
+            selectedBox = null;
+            quill.setText('');
+        }
+        box.remove();
+    });
+
 });
