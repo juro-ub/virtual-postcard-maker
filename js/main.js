@@ -95,7 +95,6 @@ $(document).ready(function () {
 
         selectedBox = this;
         quill.root.innerHTML = selectedBox.innerHTML;
-        $('#editor-panel').show();
     });
     
     let textBoxCounter = 0;
@@ -116,10 +115,22 @@ $(document).ready(function () {
         // automatisch auswählen + in Quill laden
         selectedBox = newBox[0];
         quill.root.innerHTML = selectedBox.innerHTML;
-        $('#editor-panel').show();
     });
     
-    $('#editor-wrapper').on('click', function (e) {
-        e.stopPropagation(); // ← verhindert Deselect!
+    $('.editor-wrapper, .ql-toolbar').on('click', function (e) {
+        e.stopPropagation();  // verhindert, dass der globale Handler feuert
+        if (selectedBox) {
+            // einmal alle Boxen “visuell” abwählen, dann die gespeicherte Box wieder auswählen
+            $('.text-box').removeClass('selected');
+            $(selectedBox).addClass('selected');
+        }
+    });
+
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('.text-box, .editor-wrapper, .ql-toolbar, #editor').length === 0) {
+            // nur optisch abwählen, selectedBox-Referenz bleibt erhalten
+            $('.text-box').removeClass('selected');
+            // selectedBox = null;  ← entferne diese Zeile
+        }
     });
 });
