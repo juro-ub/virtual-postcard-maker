@@ -78,7 +78,7 @@ $(document).ready(function () {
         });                
 
         $('#postcard').append(newBox);
-        makeDraggable(newBox[0]);
+        //makeDraggable(newBox[0]);
 
         // automatisch auswählen + in Quill laden
         selectedBox = newBox[0];
@@ -212,5 +212,38 @@ $(document).ready(function () {
             document.querySelector('.ql-emoji').click();
         }
     });
+    
+    interact('.text-box').draggable({
+        listeners: {
+            start(event) {
+                const target = event.target;
+                target.classList.add('dragging');
+            },
+            move(event) {
+                const target = event.target;
+
+                // aktuelle Position holen
+                let x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+                let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+                // Verschieben via transform
+                target.style.transform = `translate(${x}px, ${y}px)`;
+                target.setAttribute('data-x', x);
+                target.setAttribute('data-y', y);
+            },
+            end(event) {
+                const target = event.target;
+                target.classList.remove('dragging');
+            }
+        },
+        modifiers: [
+            interact.modifiers.restrictRect({
+                restriction: '#postcard',
+                endOnly: true
+            })
+        ],
+        inertia: true
+    });
+
 
 });

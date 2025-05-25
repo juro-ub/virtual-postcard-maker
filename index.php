@@ -20,6 +20,7 @@ include './init.php';
         <script src="<?= getBaseUrl() ?>js/lib/quill-emoji_0.1.7.js"></script>
         <script src="<?= getBaseUrl() ?>js/functions.js"></script>
         <script src="<?= getBaseUrl() ?>js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     </head>
     <body>
         <h1>Virtuelle Postkarte erstellen</h1>
