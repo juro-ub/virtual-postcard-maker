@@ -32,6 +32,9 @@ body {
     align-items: center;
 }
 
+body h1 {
+    text-align: center;
+}
 
 h2 {
     margin-top: 0;

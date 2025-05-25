@@ -21,12 +21,10 @@ include './init.php';
         <script src="<?= getBaseUrl() ?>js/main.js"></script>
     </head>
     <body>
-
+        <h1>Virtuelle Postkarte erstellen</h1>
         <div class="card-wrapper">
             <div class="card">
-                <div class="left">
-                    <h2>Virtuelle Postkarte erstellen</h2>
-
+                <div class="left">                    
                     <div id="editor-wrapper" class="editor-wrapper">
                         <label>Nachricht:</label>
                         <div id="editor"></div>
@@ -66,5 +64,9 @@ include './init.php';
                 </div>
             </div>
         </div>
+        <footer style="text-align: center; padding: 20px; font-size: 0.9em;">
+            <a href="<?= getBaseUrl() ?>datenschutz.php">Datenschutz</a> |
+            <a href="<?= getBaseUrl() ?>impressum.php">Impressum</a>
+        </footer>
     </body>
 </html>
