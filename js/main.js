@@ -1,10 +1,14 @@
 let quill;
 $(document).ready(function () {
     let selectedBox = null;
+    const Size = Quill.import('formats/size');
+    Size.whitelist = ['small', 'normal', 'large'];
+    Quill.register(Size, true);
     quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
             toolbar: [
+                [{ 'size': ['small', 'normal', 'large'] }],
                 ['bold', 'italic'],
                 [{'color': []}],
                 ['emoji']

@@ -6,7 +6,7 @@ body {
 }
 
 .card-wrapper {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 40px auto;
     padding: 20px;
 }
@@ -21,8 +21,12 @@ body {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.left,
 .right {
+    flex: 1.5; /* mehr Platz als .left */
+    min-width: 820px;
+}
+
+.left {
     flex: 1;
 }
 
@@ -53,7 +57,6 @@ label {
 select,
 #editor {
     width: 100%;
-    font-size: 16px;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -67,8 +70,8 @@ select,
 }
 #postcard {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 530px;
     border: 1px solid #ccc;
     overflow: hidden;
     max-width: 100%;
@@ -115,9 +118,19 @@ button:hover {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     cursor: move;
-    font-size: 18px;
     max-width: 400px;
-    user-select: none;
+    user-select: none;        
+    line-height: 1.3;       
+}
+
+
+.text-box p {
+    margin: 0 0 4px 0;       /* kleinere Absatzabstände */
+}
+
+.text-box strong,
+.text-box em {
+    font-weight: 600;
 }
 
 .text-box.selected {
@@ -138,6 +151,11 @@ button:hover {
     border-radius: 50%;
     border: 1px solid #666;
     z-index: 10;
+}
+
+.ql-editor {
+    line-height: 1.3;
+    padding: 10px;
 }
 
 .text-box .delete-btn:hover {
@@ -264,4 +282,16 @@ button:hover {
 .custom-emoji-close i {
     font-size: 16px;
     color: #444;
+}
+
+.ql-size-small {
+    font-size: 14px;
+}
+
+.ql-size-normal {
+    font-size: 16px;
+}
+
+.ql-size-large {
+    font-size: 20px;
 }
