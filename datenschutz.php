@@ -38,10 +38,7 @@ require_once 'init.php';
         <h2>4. Weitergabe von Daten</h2>
         <p>Es erfolgt keine Weitergabe der von dir erzeugten Inhalte an Dritte. Die geteilten Links sind öffentlich zugänglich, aber nicht auffindbar.</p>
 
-        <h2>5. Verwendung externer Dienste</h2>
-        <p>Beim Teilen deiner Postkarte über Dienste wie WhatsApp oder Telegram gelten deren eigene Datenschutzrichtlinien. Die Weiterleitung erfolgt lediglich durch das Öffnen eines neuen Browser-Tabs mit dem entsprechenden Link.</p>
-
-        <h2>6. Deine Rechte</h2>
+        <h2>5. Deine Rechte</h2>
         <p>Du hast gemäß DSGVO grundsätzlich das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten. Da jedoch keine Verknüpfung zwischen dir und den gespeicherten Bildern hergestellt wird, ist die Umsetzung dieser Rechte im Zusammenhang mit erstellten Postkarten nicht möglich.</p>
 
         <footer style="margin-top: 40px; text-align: center;">

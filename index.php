@@ -60,8 +60,6 @@ include './init.php';
                     <div id="buttonBar">                                    
                         <button id="download" class="btn-social btn-download"><i class="fa-solid fa-download"></i></button>
                         <button id="email" class="btn-social btn-email"><i class="fa-solid fa-envelope"></i></button>                           
-                        <button id="whatsapp" class="btn-social btn-whatsapp"><i class="fa-brands fa-whatsapp"></i></button>
-                        <button id="telegram" class="btn-social btn btn-telegram"><i class="fa-brands fa-telegram"></i></button>
                         <button id="print" class="btn-social btn-print"><i class="fa-solid fa-print"></i> </button>                        
                     </div>
                 </div>

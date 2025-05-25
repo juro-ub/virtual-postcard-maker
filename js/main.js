@@ -29,20 +29,6 @@ $(document).ready(function () {
     $('#bg-select').change(function () {
         $('#bg-image').attr('src', 'assets/hintergruende/' + $(this).val());
     });
-
-    $('#whatsapp').click(() => {
-      uploadAndGetLink(link => {
-        const text = `Hier ist meine virtuelle Postkarte: ${link}`;
-        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-      });
-    });
-
-    $('#telegram').click(() => {
-      uploadAndGetLink(link => {
-        const text = `Hier ist meine virtuelle Postkarte: ${link}`;
-        window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(text)}`, '_blank');
-      });
-    });
     
     $(document).on('click', '.text-box', function (e) {
         e.stopPropagation();
