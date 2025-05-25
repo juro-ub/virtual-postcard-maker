@@ -16,7 +16,7 @@ $postcardHtml = $_POST['html'] ?? '<p>Fehler: Keine Daten empfangen.</p>';
             window.onload = function () {
                 window.print();
                 window.onafterprint = function () {
-                    window.close();
+                    //window.close();
                 };
             };
         </script>

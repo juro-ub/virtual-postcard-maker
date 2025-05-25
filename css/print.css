@@ -18,3 +18,17 @@ img {
     height: auto;
     display: block;
 }
+
+.delete-btn {
+    display: none !important;
+}
+
+.text-box {
+    position: absolute;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 18px;
+    max-width: 400px;
+    user-select: none;
+}
