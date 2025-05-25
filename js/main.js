@@ -81,13 +81,6 @@ $(document).ready(function () {
     $('#share-tg').click(() => {
         uploadAndGetLink(link => window.open(`https://t.me/share/url?text=Hier ist meine Postkarte: ${link}`, '_blank'));
     });
-
-    $('#bg-select-text').change(function () {
-        const value = $(this).val();
-        if (selectedBox) {
-            $(selectedBox).css('background-color', value);
-        }
-    });
     
     $(document).on('click', '.text-box', function (e) {
         e.stopPropagation();
@@ -132,6 +125,8 @@ $(document).ready(function () {
         $('.text-box').removeClass('selected');
         newBox.addClass('selected');
 
+        const selectedBg = $('#bg-select-text').val();
+        $(selectedBox).css('background-color', selectedBg);
         quill.root.innerHTML = contentHTML;
     });
     
@@ -141,6 +136,13 @@ $(document).ready(function () {
             // einmal alle Boxen “visuell” abwählen, dann die gespeicherte Box wieder auswählen
             $('.text-box').removeClass('selected');
             $(selectedBox).addClass('selected');
+        }
+    });
+    
+    $('#bg-select-text').change(function () {
+        const value = $(this).val();
+        if (selectedBox) {
+            $(selectedBox).css('background-color', value);
         }
     });
 
