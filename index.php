@@ -17,6 +17,7 @@ include './init.php';
         <script src="<?= getBaseUrl() ?>js/lib/quill_1.3.7.min.js"></script>
         <script src="<?= getBaseUrl() ?>js/lib/html2canvas_1.4.1.min.js"></script>
         <script src="<?= getBaseUrl() ?>js/lib/quill-emoji_0.1.7.js"></script>
+        <script src="<?= getBaseUrl() ?>js/functions.js"></script>
         <script src="<?= getBaseUrl() ?>js/main.js"></script>
     </head>
     <body>
