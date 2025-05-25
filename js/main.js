@@ -78,7 +78,6 @@ $(document).ready(function () {
         });                
 
         $('#postcard').append(newBox);
-        //makeDraggable(newBox[0]);
 
         // automatisch auswählen + in Quill laden
         selectedBox = newBox[0];
