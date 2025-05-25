@@ -61,7 +61,7 @@ $(document).ready(function () {
         const newBox = $(`
         <div class="text-box" contenteditable="false">
           <div class="text-content"></div>
-          <div class="delete-btn">×</div>
+          <div class="delete-btn"><i class="fa-solid fa-xmark"></i></div>
         </div>
         `);
 
