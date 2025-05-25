@@ -36,7 +36,7 @@ body {
     align-items: center;
 }
 
-body h1 {
+.card-wrapper h1 {
     text-align: center;
 }
 
