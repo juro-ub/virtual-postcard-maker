@@ -74,12 +74,18 @@ $(document).ready(function () {
         });
     }
 
-    $('#share-ws').click(() => {
-        uploadAndGetLink(link => window.open(`https://wa.me/?text=Hier ist meine Postkarte: ${link}`, '_blank'));
+    $('#whatsapp').click(() => {
+      uploadAndGetLink(link => {
+        const text = `Hier ist meine virtuelle Postkarte: ${link}`;
+        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+      });
     });
 
-    $('#share-tg').click(() => {
-        uploadAndGetLink(link => window.open(`https://t.me/share/url?text=Hier ist meine Postkarte: ${link}`, '_blank'));
+    $('#telegram').click(() => {
+      uploadAndGetLink(link => {
+        const text = `Hier ist meine virtuelle Postkarte: ${link}`;
+        window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent(text)}`, '_blank');
+      });
     });
     
     $(document).on('click', '.text-box', function (e) {
@@ -113,9 +119,7 @@ $(document).ready(function () {
         newBox.css({
             top: 50 + textBoxCounter * 20 + 'px',
             left: 50 + textBoxCounter * 20 + 'px'
-        });
-        
-        
+        });                
 
         $('#postcard').append(newBox);
         makeDraggable(newBox[0]);
@@ -162,6 +166,42 @@ $(document).ready(function () {
             quill.setText('');
         }
         box.remove();
+    });
+    
+    $('#download').click(() => {
+        html2canvas(document.querySelector("#postcard")).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'postkarte.jpg';
+            link.href = canvas.toDataURL('image/jpeg');
+            link.click();
+        });
+    });
+    
+    $('#print').click(() => {
+        const postcardHtml = document.querySelector('#postcard').outerHTML;
+
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'print.php';
+        form.target = '_blank';
+
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'html';
+        input.value = postcardHtml;
+
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+    });
+    
+    $('#email').click(() => {
+        uploadAndGetLink(link => {
+            const subject = "Meine Postkarte für dich!";
+            const body = `Hier ist meine virtuelle Postkarte:\n\n${link}`;
+            window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
     });
 
 });

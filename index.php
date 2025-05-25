@@ -7,7 +7,7 @@ include './init.php';
         <meta charset="UTF-8">
         <title>Virtuelle Postkarte</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        <link rel="icon" type="image/png" href="<?= getBaseUrl() ?>assets/favicon.png">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill_snow_1.3.7.css">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/main.css">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill-emoji_0.1.7.css">
@@ -55,12 +55,12 @@ include './init.php';
                             <img id="bg-image" src="assets/hintergruende/strand_1200x800.jpg" />
                         </div>
                     </div>
-                    <div>                                    
+                    <div id="buttonBar">                                    
                         <button id="download" class="btn-social btn-download"><i class="fa-solid fa-download"></i></button>
                         <button id="email" class="btn-social btn-email"><i class="fa-solid fa-envelope"></i></button>                           
                         <button id="whatsapp" class="btn-social btn-whatsapp"><i class="fa-brands fa-whatsapp"></i></button>
                         <button id="telegram" class="btn-social btn btn-telegram"><i class="fa-brands fa-telegram"></i></button>
-                        <button class="btn-social btn-print" onclick="window.print()"><i class="fa-solid fa-print"></i> </button>                        
+                        <button id="print" class="btn-social btn-print"><i class="fa-solid fa-print"></i> </button>                        
                     </div>
                 </div>
             </div>

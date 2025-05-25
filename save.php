@@ -1,4 +1,5 @@
 <?php
+require_once 'init.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     $uploadDir = __DIR__ . '/output/';
     if (!file_exists($uploadDir)) {
@@ -7,7 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     $filename = 'postkarte-' . time() . '.png';
     $filepath = $uploadDir . $filename;
     if (move_uploaded_file($_FILES['image']['tmp_name'], $filepath)) {
-        echo 'output/' . $filename;
+        $fullUrl = getBaseUrl() . 'output/' . $filename;
+        echo $fullUrl;
     } else {
         echo 'Fehler beim Speichern';
     }

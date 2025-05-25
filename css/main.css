@@ -239,6 +239,7 @@ button:hover {
   outline: none;
   box-shadow: 0 0 0 3px rgba(224, 195, 163, 0.5);
 }
+
 #emoji-close-div {
   z-index: 1 !important;
   background: transparent !important;
