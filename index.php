@@ -10,6 +10,7 @@ include './init.php';
         <link rel="icon" type="image/png" href="<?= getBaseUrl() ?>assets/favicon.png">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill_snow_1.3.7.css">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/main.css">
+        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/mobile.css">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill-emoji_0.1.7.css">
         <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/font-awesome-6.5.0.css">
 
