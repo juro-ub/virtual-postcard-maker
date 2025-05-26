@@ -32,6 +32,15 @@ include './init.php';
                     <div id="editor-wrapper" class="editor-wrapper">
                         <label>Nachricht:</label>
                         <div id="editor"></div>
+                        <label for="bg-select-text">Text-Hintergrund:</label>
+                        <select id="bg-select-text">
+                            <option value="transparent" selected>Kein Hintergrund</option>
+                            <option value="white">Weiß</option>
+                            <option value="rgba(255,255,255,0.8)">Weiß (transparent)</option>
+                            <option value="rgba(0,0,0,0.5)">Dunkel (transparent)</option>
+                            <option value="#fdf6e3">Beige</option>
+                        </select>
+                        
                         <label>Hintergrundbild auswählen:</label>
                         <select id="bg-select">
                             <option value="strand_1200x800.jpg">Strand</option>
@@ -46,15 +55,7 @@ include './init.php';
                         <p class="uploadHint">
                             📐 Optimale Größe: <strong>1200×800 Pixel</strong> (Querformat). Das Bild wird bei Bedarf automatisch angepasst.
                         </p>     
-                        
-                        <label for="bg-select-text">Text-Hintergrund:</label>
-                        <select id="bg-select-text">
-                            <option value="transparent" selected>Kein Hintergrund</option>
-                            <option value="white">Weiß</option>
-                            <option value="rgba(255,255,255,0.8)">Weiß (transparent)</option>
-                            <option value="rgba(0,0,0,0.5)">Dunkel (transparent)</option>
-                            <option value="#fdf6e3">Beige</option>
-                        </select>
+                                                
                         <button id="add-textbox" class="btn-social btn-add"><i class="fa-solid fa-plus"></i> Textfeld hinzufügen</button>                                                
                     </div>
                 </div>
