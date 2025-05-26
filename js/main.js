@@ -245,24 +245,31 @@ $(document).ready(function () {
     interact('.text-box').draggable({
         listeners: {
             start(event) {
-                const target = event.target;
-                target.classList.add('dragging');
+                const style = window.getComputedStyle(event.target);
+                event.target.setAttribute('data-x', parseInt(style.left) || 0);
+                event.target.setAttribute('data-y', parseInt(style.top) || 0);
             },
             move(event) {
                 const target = event.target;
 
-                // aktuelle Position holen
                 let x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
                 let y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-                // Verschieben via transform
-                target.style.transform = `translate(${x}px, ${y}px)`;
+                // Begrenzung auf Containergröße
+                const container = document.querySelector('#postcard');
+                const maxX = container.clientWidth - target.offsetWidth;
+                const maxY = container.clientHeight - target.offsetHeight;
+                x = Math.max(0, Math.min(x, maxX));
+                y = Math.max(0, Math.min(y, maxY));
+
+                target.style.left = `${x}px`;
+                target.style.top = `${y}px`;
+
                 target.setAttribute('data-x', x);
                 target.setAttribute('data-y', y);
             },
             end(event) {
-                const target = event.target;
-                target.classList.remove('dragging');
+                event.target.classList.remove('dragging');
             }
         },
         modifiers: [
