@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['imageData'])) {
     <head>
         <meta charset="UTF-8">
         <title>Postkarte drucken</title>
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>print.css">
+        <link rel="stylesheet" href="<?= assetUrl('print.css') ?>">
     </head>
     <body>
         <img src="<?= htmlspecialchars($imageData) ?>" alt="Postkarte" class="print-image" />

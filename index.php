@@ -7,21 +7,22 @@ include './init.php';
         <meta charset="UTF-8">
         <title>Virtuelle Postkarte</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="<?= getBaseUrl() ?>assets/favicon.png">
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill_snow_1.3.7.css">
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/main.css">
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/mobile.css">
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/quill-emoji_0.1.7.css">
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/lib/font-awesome-6.5.0.css">
+        <link rel="icon" type="image/png" href="<?= assetUrl('assets/favicon.png') ?>">
 
-        <script src="<?= getBaseUrl() ?>js/lib/interact_1.10.27.min.js"></script>
-        <script src="<?= getBaseUrl() ?>js/lib/jquery-3.7.1.min.js"></script>
-        <script src="<?= getBaseUrl() ?>js/lib/quill_1.3.7.min.js"></script>
-        <script src="<?= getBaseUrl() ?>js/lib/html2canvas_1.4.1.min.js"></script>
-        <script src="<?= getBaseUrl() ?>js/lib/quill-emoji_0.1.7.js"></script>
-        <script src="<?= getBaseUrl() ?>js/functions.js"></script>
-        <script src="<?= getBaseUrl() ?>js/main.js"></script>
-        
+        <link rel="stylesheet" href="<?= assetUrl('css/lib/quill_snow_1.3.7.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/main.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/mobile.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/lib/quill-emoji_0.1.7.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/lib/font-awesome-6.5.0.css') ?>">
+
+        <script src="<?= assetUrl('js/lib/interact_1.10.27.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/jquery-3.7.1.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/quill_1.3.7.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/html2canvas_1.4.1.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/quill-emoji_0.1.7.js') ?>"></script>
+        <script src="<?= assetUrl('js/functions.js') ?>"></script>
+        <script src="<?= assetUrl('js/main.js') ?>"></script>
+
     </head>
     <body>       
         <div class="card-wrapper">

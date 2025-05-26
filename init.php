@@ -7,4 +7,10 @@ function getBaseUrl(): string {
     return $protocol . $host . $path . '/';
 }
 
+function assetUrl($path) {
+    $fullPath = __DIR__ . '/' . $path;
+    $timestamp = file_exists($fullPath) ? filemtime($fullPath) : time(); // fallback bei Fehler
+    return getBaseUrl() . $path . '?v=' . $timestamp;
+}
+
 ?>
