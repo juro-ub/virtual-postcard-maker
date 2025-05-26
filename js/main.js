@@ -21,7 +21,6 @@ $(document).ready(function () {
 
     quill.on('text-change', function () {
         if (selectedBox) {
-            // NUR den .text-content updaten, nicht die ganze Box
             $(selectedBox).find('.text-content').html(quill.root.innerHTML);
         }
     });        
@@ -99,7 +98,8 @@ $(document).ready(function () {
     });
     
     $(document).on('click', '.text-box .delete-btn', function (e) {
-        e.stopPropagation();               // verhindert Deselektion
+        // verhindert Deselektion
+        e.stopPropagation();
         const box = $(this).closest('.text-box');
         // falls das gelöschte Feld gerade aktiv war, reset selectedBox
         if (box[0] === selectedBox) {
@@ -143,7 +143,7 @@ $(document).ready(function () {
         });
     });
     
-    // === Eigenes Hintergrundbild – browserbasiert & angepasst ===
+    // Eigenes Hintergrundbild
     const maxSizeMB = 7;
 
     $('#bg-upload').on('change', function (e) {
@@ -240,6 +240,7 @@ $(document).ready(function () {
         }
     });
     
+    //make .text-boxe draggable
     interact('.text-box').draggable({
         listeners: {
             start(event) {
