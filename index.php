@@ -39,6 +39,13 @@ include './init.php';
                             <option value="katze_1200x800.jpg">Katze</option>
                             <option value="winter_1200x800.jpg">Winter</option>
                         </select>
+                        
+                        <label for="bg-upload">Eigenes Hintergrundbild:</label>
+                        <input type="file" id="bg-upload" accept="image/*">
+                        <p class="uploadHint">
+                            📐 Optimale Größe: <strong>1200×800 Pixel</strong> (Querformat). Das Bild wird bei Bedarf automatisch angepasst.
+                        </p>     
+                        
                         <label for="bg-select-text">Text-Hintergrund:</label>
                         <select id="bg-select-text">
                             <option value="transparent" selected>Kein Hintergrund</option>
@@ -47,8 +54,8 @@ include './init.php';
                             <option value="rgba(0,0,0,0.5)">Dunkel (transparent)</option>
                             <option value="#fdf6e3">Beige</option>
                         </select>
-                        <button id="add-textbox" class="btn-social btn-add"><i class="fa-solid fa-plus"></i> Textfeld hinzufügen</button>
-                    </div>      
+                        <button id="add-textbox" class="btn-social btn-add"><i class="fa-solid fa-plus"></i> Textfeld hinzufügen</button>                                                
+                    </div>
                 </div>
 
                 <div class="right">

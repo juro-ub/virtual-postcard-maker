@@ -145,6 +145,52 @@ $(document).ready(function () {
         showDeleteButtons();
     });
     
+    // === Eigenes Hintergrundbild – browserbasiert & angepasst ===
+    const maxSizeMB = 7;
+
+    $('#bg-upload').on('change', function (e) {
+        const file = e.target.files[0];
+        if (!file)
+            return;
+
+        if (file.size > maxSizeMB * 1024 * 1024) {
+            alert(`Die Datei ist zu groß (${(file.size / 1024 / 1024).toFixed(2)} MB). Bitte wähle ein Bild unter ${maxSizeMB} MB.`);
+            $(this).val('');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const img = new Image();
+            img.onload = function () {
+                const targetWidth = 1200;
+                const targetHeight = 800;
+
+                const canvas = document.createElement('canvas');
+                canvas.width = targetWidth;
+                canvas.height = targetHeight;
+
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = "#ffffff"; // Hintergrund (für z.B. transparente PNGs)
+                ctx.fillRect(0, 0, targetWidth, targetHeight);
+
+                // Bild einpassen (Seitenverhältnis beibehalten)
+                const scale = Math.min(targetWidth / img.width, targetHeight / img.height);
+                const newW = img.width * scale;
+                const newH = img.height * scale;
+                const offsetX = (targetWidth - newW) / 2;
+                const offsetY = (targetHeight - newH) / 2;
+
+                ctx.drawImage(img, offsetX, offsetY, newW, newH);
+
+                const dataUrl = canvas.toDataURL('image/jpeg', 0.9);
+                $('#bg-image').attr('src', dataUrl);
+            };
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+    
     /*
      * 
      * Kleine Hacks für das Emoji Menü in Quill
