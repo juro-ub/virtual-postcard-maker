@@ -192,14 +192,6 @@ button:hover {
     transform: translateY(-2px);
 }
 
-.btn-email {
-    background-color: #0072c6; /* klassisches Outlook-Blau */
-}
-.btn-email:hover {
-    background-color: #005fa3;
-    transform: translateY(-2px);
-}
-
 .btn-download {
     background-color: #6c63ff; /* hübsches Lila/Violett */
 }

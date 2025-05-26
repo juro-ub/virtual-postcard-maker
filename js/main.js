@@ -145,14 +145,6 @@ $(document).ready(function () {
         showDeleteButtons();
     });
     
-    $('#email').click(() => {
-        uploadAndGetLink(link => {
-            const subject = "Meine Postkarte für dich!";
-            const body = `Hier ist meine virtuelle Postkarte:\n\n${link}`;
-            window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        });
-    });
-    
     /*
      * 
      * Kleine Hacks für das Emoji Menü in Quill
