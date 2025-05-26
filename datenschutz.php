@@ -7,6 +7,7 @@ require_once 'init.php';
         <meta charset="UTF-8">
         <title>Datenschutzerklärung</title>
         <link rel="stylesheet" href="<?= assetUrl('css/main.css') ?>">
+        <link rel="icon" type="image/png" href="<?= assetUrl('assets/favicon.png') ?>">
     </head>
     <body style="padding: 40px; font-family: system-ui, sans-serif;">
         <h1 style="text-align: center;">Datenschutzerklärung</h1>

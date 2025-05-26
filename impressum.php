@@ -6,6 +6,7 @@ require_once 'init.php';
 <head>
   <meta charset="UTF-8">
   <title>Impressum</title>
+  <link rel="icon" type="image/png" href="<?= assetUrl('assets/favicon.png') ?>">
   <link rel="stylesheet" href="<?= assetUrl('css/main.css') ?>">
 </head>
 <body style="padding: 40px; font-family: system-ui, sans-serif;">
