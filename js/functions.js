@@ -5,7 +5,3 @@ function hideDeleteButtons() {
 function showDeleteButtons() {
     $('.delete-btn').show();
 }
-
-function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iOS/i.test(navigator.userAgent);
-}

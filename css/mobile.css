@@ -1,6 +1,8 @@
 @media (max-width: 768px) {
-    
-    
+    #print {
+        display: none !important;
+    }
+
     .card {
         flex-direction: column;
         gap: 20px;
