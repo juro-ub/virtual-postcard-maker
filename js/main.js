@@ -124,25 +124,58 @@ $(document).ready(function () {
         hideDeleteButtons();
         html2canvas(document.querySelector('#postcard'), {useCORS: true}).then(canvas => {
             const dataUrl = canvas.toDataURL('image/png');
+            if (isMobileDevice()) {
+                // Alternative für mobile Geräte – z. B. nur Hinweis oder anderes Verhalten
+                const win = window.open('', '_blank');
+                if (!win) {
+                    alert("Bitte Pop-ups erlauben.");
+                    showDeleteButtons();
+                    return;
+                }
 
-            const $form = $('<form>', {
-                method: 'POST',
-                action: 'print.php',
-                target: '_blank'
-            });
+                win.document.write(`
+                <html>
+                <head>
+                    <title>Postkarte anzeigen</title>
+                    <style>
+                        body { margin: 0; text-align: center; font-family: system-ui; }
+                        img { width: 100%; max-width: 100%; height: auto; }
+                        .hint {
+                            font-size: 16px;
+                            padding: 12px;
+                            color: #555;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <img src="${dataUrl}">
+                    <div class="hint">
+                        📱 Drucken ist auf Mobilgeräten nicht direkt verfügbar.<br>
+                        Du kannst die Seite als Screenshot sichern oder teilen.
+                    </div>
+                </body>
+                </html>
+            `);
+                win.document.close();
+            } else {
+                const $form = $('<form>', {
+                    method: 'POST',
+                    action: 'print.php',
+                    target: '_blank'
+                });
+                const $input = $('<input>', {
+                    type: 'hidden',
+                    name: 'imageData',
+                    value: dataUrl
+                });
+                $form.append($input);
+                $('body').append($form); // Temporär ins DOM einfügen
+                $form.submit(); // Abschicken
+                $form.remove(); // Danach wieder entfernen
 
-            const $input = $('<input>', {
-                type: 'hidden',
-                name: 'imageData',
-                value: dataUrl
-            });
-
-            $form.append($input);
-            $('body').append($form);     // Temporär ins DOM einfügen
-            $form.submit();              // Abschicken
-            $form.remove();              // Danach wieder entfernen
+            }
+            showDeleteButtons();
         });
-        showDeleteButtons();
     });
     
     // === Eigenes Hintergrundbild – browserbasiert & angepasst ===
