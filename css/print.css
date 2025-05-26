@@ -1,35 +1,19 @@
+@page {
+    size: A6 landscape;
+    margin: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
-    text-align: center;
     background: white;
+    text-align: center;
 }
 
-#postcard {
-    width: 100%;
-    height: auto;
-    border: none;
-    box-shadow: none;
-    margin: 0 auto;
-}
-
-img {
+.print-image {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.delete-btn {
-    display: none !important;
-}
-
-.text-box {
-    position: absolute;
-    text-align: left;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    font-size: 18px;
-    max-width: 400px;
-    user-select: none;
+    margin: 0 auto;
+    page-break-inside: avoid;
 }

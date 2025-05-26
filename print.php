@@ -1,22 +1,25 @@
 <?php
 include './init.php';
-// Datei: print.php
-$postcardHtml = $_POST['html'] ?? '<p>Fehler: Keine Daten empfangen.</p>';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['imageData'])) {
+    $imageData = $_POST['imageData'];
+} else {
+    die("Keine Bilddaten übergeben.");
+}
 ?>
 <!DOCTYPE html>
 <html lang="de">
     <head>
         <meta charset="UTF-8">
         <title>Postkarte drucken</title>
-        <link rel="stylesheet" href="<?= getBaseUrl() ?>css/print.css">
+        <link rel="stylesheet" href="<?= getBaseUrl() ?>print.css">
     </head>
     <body>
-        <?= $postcardHtml ?>
+        <img src="<?= htmlspecialchars($imageData) ?>" alt="Postkarte" class="print-image" />
         <script>
             window.onload = function () {
                 window.print();
                 window.onafterprint = function () {
-                    //window.close();
+                    window.close();
                 };
             };
         </script>

@@ -121,22 +121,28 @@ $(document).ready(function () {
     });
     
     $('#print').click(() => {
-        const postcardHtml = document.querySelector('#preview-wrapper').outerHTML;
+        hideDeleteButtons();
+        html2canvas(document.querySelector('#postcard'), {useCORS: true}).then(canvas => {
+            const dataUrl = canvas.toDataURL('image/png');
 
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = 'print.php';
-        form.target = '_blank';
+            const $form = $('<form>', {
+                method: 'POST',
+                action: 'print.php',
+                target: '_blank'
+            });
 
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'html';
-        input.value = postcardHtml;
+            const $input = $('<input>', {
+                type: 'hidden',
+                name: 'imageData',
+                value: dataUrl
+            });
 
-        form.appendChild(input);
-        document.body.appendChild(form);
-        form.submit();
-        document.body.removeChild(form);
+            $form.append($input);
+            $('body').append($form);     // Temporär ins DOM einfügen
+            $form.submit();              // Abschicken
+            $form.remove();              // Danach wieder entfernen
+        });
+        showDeleteButtons();
     });
     
     $('#email').click(() => {
