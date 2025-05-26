@@ -1,5 +1,19 @@
 @media (max-width: 768px) {
-    .card, .card-wrapper{
-        width: fit-content;
+    
+    
+    .card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .right {
+        align-items: stretch;
     }
 }

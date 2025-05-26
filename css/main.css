@@ -5,6 +5,10 @@ body {
     color: #222;
 }
 
+.card, .card-wrapper{
+    width: fit-content;
+}
+
 .card-wrapper {
     max-width: 1500px;
     margin: 40px auto;
