@@ -75,7 +75,7 @@ select,
 #postcard {
     position: relative;
     width: 800px;
-    height: 530px;
+    height: 533.3px;
     border: 1px solid #ccc;
     overflow: hidden;
     max-width: 100%;
