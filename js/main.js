@@ -111,7 +111,7 @@ $(document).ready(function () {
 
     $('#download').click(() => {
         hideDeleteButtons();
-        html2canvas(document.querySelector("#postcard")).then(canvas => {
+        html2canvas(document.querySelector("#postcard"),{ useCORS: true,scale: 1.7 }).then(canvas => {
             const link = document.createElement('a');
             link.download = 'postkarte.jpg';
             link.href = canvas.toDataURL('image/jpeg');
@@ -122,7 +122,7 @@ $(document).ready(function () {
 
     $('#print').click(() => {
         hideDeleteButtons();
-        html2canvas(document.querySelector('#postcard'), {useCORS: true}).then(canvas => {
+        html2canvas(document.querySelector('#postcard'), {useCORS: true,scale: 1.7}).then(canvas => {
             const dataUrl = canvas.toDataURL('image/png');
 
             const $form = $('<form>', {
