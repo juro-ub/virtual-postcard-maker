@@ -265,15 +265,15 @@ button:hover {
 }
 
 .ql-size-small {
-    font-size: 16px;
-}
-
-.ql-size-normal {
     font-size: 20px;
 }
 
+.ql-size-normal {
+    font-size: 30px;
+}
+
 .ql-size-large {
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .uploadHint {

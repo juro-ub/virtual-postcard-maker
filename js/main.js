@@ -18,6 +18,31 @@ $(document).ready(function () {
             "emoji-shortname": true
         }
     });
+    
+    // Finde die Size-Picker-Elemente
+    const toolbar = document.querySelector('.ql-toolbar');
+    toolbar.addEventListener('click', function (event) {
+        const pickerItem = event.target.closest('.ql-size .ql-picker-item');
+        if (pickerItem) {
+            // 1. Inline Styles entfernen (Global reset)
+            quill.root.querySelectorAll('[style*="font-size"]').forEach(el => el.style.fontSize = null);
+
+            // 2. Neue globale Größe setzen
+            let size = pickerItem.dataset.value;
+            let px;
+            switch (size) {
+                case 'small':
+                    px = '20px';
+                    break;
+                case 'large':
+                    px = '35px';
+                    break;
+                default:
+                    px = '30px'; // normal
+            }
+            quill.root.style.fontSize = px;
+        }
+    });
 
     quill.on('text-change', function () {
         if (selectedBox) {
