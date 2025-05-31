@@ -108,6 +108,20 @@ $(document).ready(function () {
         }
         box.remove();
     });
+    
+    const filterMap = {
+        none: 'none',
+        sepia: 'sepia(1)',
+        brightness: 'brightness(1.2)',
+        contrast: 'contrast(1.4)',
+        vignette: 'contrast(1.1) brightness(0.9) drop-shadow(0 0 60px #0008)', // Vignette nur als Annäherung
+        grayscale: 'grayscale(1)'
+    };
+
+    document.getElementById('filter-select').addEventListener('change', function (e) {
+        const filter = filterMap[e.target.value] || 'none';
+        document.getElementById('postcard').style.filter = filter;
+    });
 
     $('#download').click(() => {
         hideDeleteButtons();
