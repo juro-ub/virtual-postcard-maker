@@ -147,6 +147,7 @@ $(document).ready(function () {
         const selectedBg = $('#bg-select-text').val();
         $(selectedBox).css('background-color', selectedBg);
         quill.root.innerHTML = contentHTML;
+        hasFirstInput = false;
     });
     
     $('.editor-wrapper, .ql-toolbar').on('click', function (e) {
