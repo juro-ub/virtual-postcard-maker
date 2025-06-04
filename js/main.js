@@ -31,6 +31,20 @@ $(document).ready(function () {
         }
     });
 
+    // Setze den ersten Absatz auf normal
+    quill.formatText(0, 1, 'size', 'normal');
+
+    // Dann simuliere einen Klick auf die entsprechende Option im Picker, um die Anzeige zu aktualisieren:
+    const t = quill.getModule('toolbar');
+    const picker = t.container.querySelector('.ql-size.ql-picker');
+    if (picker) {
+        // Finde die "normal"-Option
+        const normalOption = picker.querySelector('.ql-picker-item[data-value="normal"]');
+        if (normalOption) {
+            normalOption.click();
+        }
+    }
+
     createEmojiPanel(quill);
     
     // Finde die Size-Picker-Elemente

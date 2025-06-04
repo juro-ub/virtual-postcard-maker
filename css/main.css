@@ -226,11 +226,15 @@ button:hover {
 }
 
 .ql-size-normal {
-    font-size: 25px;
+    font-size: 24px;
+}
+
+.ql-editor {
+    font-size: 24px;
 }
 
 .ql-size-large {
-    font-size: 32px;
+    font-size: 31px;
 }
 
 .uploadHint {
