@@ -125,7 +125,7 @@ $(document).ready(function () {
         const newBox = $(`
         <div class="text-box" contenteditable="false">
           <div class="text-content"></div>
-          <div class="delete-btn"><i class="fa-solid fa-xmark"></i></div>
+          <button id="delete-btn" class="btn-close delete-btn" aria-label="Close"></button>
         </div>
         `);
 
@@ -184,7 +184,7 @@ $(document).ready(function () {
         }
     });
     
-    $(document).on('click', '.text-box .delete-btn', function (e) {
+    $(document).on('click', '.text-box #delete-btn', function (e) {
         // verhindert Deselektion
         e.stopPropagation();
         const box = $(this).closest('.text-box');

@@ -1,7 +1,7 @@
 function hideDeleteButtons() {
-    $('.delete-btn').hide();
+    $('#delete-btn').hide();
 }
 
 function showDeleteButtons() {
-    $('.delete-btn').show();
+    $('#delete-btn').show();
 }

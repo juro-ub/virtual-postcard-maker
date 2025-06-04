@@ -16,6 +16,7 @@ body {
 }
 
 .card {
+    flex-direction: row;
     display: flex;
     gap: 40px;
     background: white;
@@ -118,88 +119,17 @@ select,
     outline: 2px dashed #555;
 }
 
-.text-box .delete-btn {
+.delete-btn {
     position: absolute;
-    top: 2px;
-    right: 2px;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    background: #fff;
-    border-radius: 50%;
-    border: 1px solid #666;
+    top: -17px;    /* oder -8px, je nach Größe */
+    right: -17px;  /* oder -8px */
     z-index: 10;
+    /* Optional: Schatten, Hintergrund, größerer Klickbereich */
 }
 
 .ql-editor {
     line-height: 1.3;
     padding: 10px;
-}
-
-.text-box .delete-btn:hover {
-    background: #f8d7da;
-    border-color: #f5c6cb;
-}
-
-.btn-social {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 999px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.btn-social i {
-    font-size: 20px;
-}
-
-/* Druck-Style */
-.btn-print {
-    background-color: #444;
-}
-.btn-print:hover {
-    background-color: #222;
-    transform: translateY(-2px);
-}
-
-.btn-download {
-    background-color: #6c63ff; /* hübsches Lila/Violett */
-}
-.btn-download:hover {
-    background-color: #5548e0;
-    transform: translateY(-2px);
-}
-
-.btn-custom {
-  background-color: #e0c3a3;  /* sanftes Apricot/Beige */
-  color: #333;
-  margin-top: 20px;
-}
-
-.btn-custom:hover {
-  background-color: #d4b48e;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btn-custom:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(224, 195, 163, 0.5);
-}
-
-.btn-select-bg{
-    margin-top: 0px;
-    margin-bottom: 10px;
 }
 
 .ql-size-small {
@@ -229,47 +159,8 @@ select,
     margin-bottom: 10px;
 }
 
-/*
-Styles for select boxes
-*/
-#bg-select-text,
-#bg-select,
-#filter-select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 22px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s;
-    outline: none;
-    box-shadow: none;
-    display: inline-block;
-    min-width: 130px;
-    background-image:
-        linear-gradient(45deg, transparent 49%, white 50%, white 51%, transparent 52%),
-        linear-gradient(135deg, transparent 49%, white 50%, white 51%, transparent 52%);
-    background-position:
-        calc(100% - 26px) calc(50% - 5px),
-        calc(100% - 20px) calc(50% - 5px);
-    background-size: 6px 6px, 6px 6px;
-    background-repeat: no-repeat;
-    padding-right: 38px;
-}
-
-#bg-select-text:hover,
-#bg-select:hover,
-#filter-select:hover {
-    background: #388e3c;
-}
-
-#bg-select-text:focus,
-#bg-select:focus,
-#filter-select:focus {
-    outline: 2px solid #388e3c;
-    background: #388e3c;
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
 }

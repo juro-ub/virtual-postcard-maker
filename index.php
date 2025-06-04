@@ -27,6 +27,12 @@ include './init.php';
         <script src="<?= assetUrl('js/functions.js') ?>"></script>
         <script src="<?= assetUrl('js/emoji-panel.js') ?>"></script>
         <script src="<?= assetUrl('js/main.js') ?>"></script>
+        <style>
+                    .card {
+            
+}
+        </style>
+
     </head>
     <body>       
         <div class="card-wrapper">
@@ -37,7 +43,7 @@ include './init.php';
                         <label>Nachricht:</label>
                         <div id="editor"></div>
                         <label for="bg-select-text">Text-Hintergrund:</label>
-                        <select id="bg-select-text">
+                        <select class="form-select" id="bg-select-text">
                             <option value="rgba(0,0,0,0)">Kein Hintergrund</option>
                             <option value="rgba(255,255,255,1)">Weiß</option>
                             <option value="rgba(255,255,255,0.8)">Weiß (transparent)</option>
@@ -46,7 +52,7 @@ include './init.php';
                         </select>
                         
                         <label>Hintergrundbild auswählen:</label>
-                        <select id="bg-select">
+                        <select class="form-select" id="bg-select">
                             <option value="strand_1200x800.jpg">Strand</option>
                             <option value="geburtstag_1200x800.jpg">Geburtstag</option>
                             <option value="herzen_1200x800.jpg">Herzen</option>
@@ -55,10 +61,7 @@ include './init.php';
                         </select>
                         
                         <label for="bg-upload">Eigenes Hintergrundbild:</label>
-                        <!-- Verstecktes File-Input -->
-                        <input type="file" id="bg-upload" accept="image/*" style="display:none;">
-                        <!-- Label als Button-Ersatz -->
-                        <label for="bg-upload" class="btn-social btn-custom btn-select-bg">Bild auswählen</label>
+                        <input class="form-control" type="file" id="bg-upload" accept="image/*">
                         <p class="uploadHint">
                             📐 Optimale Größe: <strong>1200×800 Pixel</strong> (Querformat).
                         </p>
@@ -68,15 +71,15 @@ include './init.php';
                           <div class="modal-content">
                             <img id="bg-cropper-image" alt="Cropper">
                             <div class="modal-actions">
-                              <button id="crop-btn" class="btn-social btn-custom">Ausschnitt übernehmen</button>
-                              <button id="cancel-btn" class="btn-social btn-custom">Abbrechen</button>
+                              <button id="crop-btn" class="btn btn-primary">Ausschnitt übernehmen</button>
+                              <button id="cancel-btn" class="btn btn-primary">Abbrechen</button>
                             </div>
                           </div>
                         </div>
 
                           
                         <label for="filter-select">Filter wählen:</label>
-                        <select id="filter-select">
+                        <select class="form-select" id="filter-select">
                             <option value="none">Kein Filter</option>
                             <option value="sepia">Sepia</option>
                             <option value="brightness">Helligkeit +0.2</option>
@@ -85,7 +88,7 @@ include './init.php';
                             <option value="blur">Weichzeichnen</option>
                             <option value="huerotate">Farbton verschieben</option>
                         </select>
-                        <button id="add-textbox" class="btn-social btn-custom"><i class="fa-solid fa-plus"></i> Textfeld hinzufügen</button>
+                        <button id="add-textbox" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Textfeld hinzufügen</button>
                     </div>
                 </div>
 
@@ -96,12 +99,12 @@ include './init.php';
                         </div>
                     </div>
                     <div id="buttonBar">                                    
-                        <button id="download" class="btn-social btn-download"><i class="fa-solid fa-download"></i></button>                                                
-                        <button id="print" class="btn-social btn-print"><i class="fa-solid fa-print"></i> </button>                        
+                        <button id="download" class="btn btn-primary"><i class="fa-solid fa-download"></i></button>
+                        <button id="print" class="btn btn-primary"><i class="fa-solid fa-print"></i> </button>
                     </div>
                 </div>
             </div>
-            <footer style="text-align: center; padding: 20px; font-size: 0.9em;">
+            <footer style="">
                 <a href="<?= getBaseUrl() ?>datenschutz.php">Datenschutz</a> |
                 <a href="<?= getBaseUrl() ?>impressum.php">Impressum</a>
             </footer>
