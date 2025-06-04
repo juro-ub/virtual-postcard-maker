@@ -200,8 +200,9 @@ $(document).ready(function () {
         sepia: 'sepia(1)',
         brightness: 'brightness(1.2)',
         contrast: 'contrast(1.4)',
-        vignette: 'contrast(1.1) brightness(0.9) drop-shadow(0 0 60px #0008)', // Vignette nur als Annäherung
-        grayscale: 'grayscale(1)'
+        grayscale: 'grayscale(1)',
+        blur: 'blur(2px)',
+        huerotate: 'hue-rotate(45deg)'
     };
 
     document.getElementById('filter-select').addEventListener('change', function (e) {

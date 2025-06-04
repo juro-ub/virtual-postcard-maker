@@ -62,8 +62,9 @@ include './init.php';
                             <option value="sepia">Sepia</option>
                             <option value="brightness">Helligkeit +0.2</option>
                             <option value="contrast">Kontrast +0.4</option>
-                            <option value="vignette">Vignette</option>
                             <option value="grayscale">Graustufen</option>
+                            <option value="blur">Weichzeichnen</option>
+                            <option value="huerotate">Farbton verschieben</option>
                         </select>
                         <button id="add-textbox" class="btn-social btn-add"><i class="fa-solid fa-plus"></i> Textfeld hinzufügen</button>                                                
                     </div>
