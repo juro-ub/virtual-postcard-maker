@@ -95,4 +95,4 @@ Rufe [http://virtual-postcard-maker.local](http://virtual-postcard-maker.local) 
 ---
 
 **Hinweis:** Dieses Projekt wurde als reines Hobbyprojekt gestartet und eignet sich ideal als kleines Webtool oder Inspiration für eigene kreative Ideen.
-Die Anwendung benötigt keine Datenbank und läuft vollständig ohne Backend-Logik (außer für optionale Druckfunktion per `print.php` auf Desktop
+Die Anwendung benötigt keine Datenbank und läuft vollständig ohne Backend-Logik (außer für optionale Druckfunktion per `print.php` auf Desktop)
