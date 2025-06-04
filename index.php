@@ -9,16 +9,16 @@ include './init.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="<?= assetUrl('assets/favicon.png') ?>">
 
-        <link rel="stylesheet" href="<?= assetUrl('css/lib/quill_snow_1.3.7.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/lib/quill.snow.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/main.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/mobile.css') ?>">
-        <link rel="stylesheet" href="<?= assetUrl('css/lib/font-awesome-6.5.0.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/lib/all.min.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/emoji-panel.css') ?>">
 
-        <script src="<?= assetUrl('js/lib/interact_1.10.27.min.js') ?>"></script>
-        <script src="<?= assetUrl('js/lib/jquery-3.7.1.min.js') ?>"></script>
-        <script src="<?= assetUrl('js/lib/quill_1.3.7.min.js') ?>"></script>
-        <script src="<?= assetUrl('js/lib/html2canvas_1.4.1.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/interact.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/jquery.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/quill.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/html2canvas.min.js') ?>"></script>
         <script src="<?= assetUrl('js/functions.js') ?>"></script>
         <script src="<?= assetUrl('js/emoji-panel.js') ?>"></script>
         <script src="<?= assetUrl('js/main.js') ?>"></script>
