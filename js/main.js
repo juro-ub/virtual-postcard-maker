@@ -30,7 +30,9 @@ $(document).ready(function () {
             }
         }
     });
-
+    /*
+     * Set font size normal after init
+     */
     // Setze den ersten Absatz auf normal
     quill.formatText(0, 1, 'size', 'normal');
 
