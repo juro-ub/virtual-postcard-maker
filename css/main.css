@@ -69,6 +69,7 @@ select,
 
 #editor {
     height: 300px;
+    width: 500px;
     background: #fff;
     overflow-y: auto;
 }
