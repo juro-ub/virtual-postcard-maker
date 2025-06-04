@@ -39,6 +39,7 @@ function createEmojiPanel(quill, options) {
         btn.style.padding = '2px 4px';
         btn.onclick = function (e) {
             e.preventDefault();
+            e.stopPropagation();
             var range = quill.getSelection(true);
             if (range) {
                 quill.insertText(range.index, emoji, 'user');
@@ -60,6 +61,10 @@ function createEmojiPanel(quill, options) {
 
     emojiButton.appendChild(emojiPanel);
     toolbarContainer.appendChild(emojiButton);
+
+    emojiButton.onmousedown = function(e) {
+        e.stopPropagation(); // Panel bleibt offen, wenn Button geklickt wird
+    };
 
     document.addEventListener('mousedown', function (event) {
         // Panel schließen, wenn weder Button noch Panel angeklickt wurde

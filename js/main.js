@@ -33,19 +33,17 @@ $(document).ready(function () {
     /*
      * Set font size normal after init
      */
-    // Setze den ersten Absatz auf normal
-    quill.formatText(0, 1, 'size', 'normal');
-
-    // Dann simuliere einen Klick auf die entsprechende Option im Picker, um die Anzeige zu aktualisieren:
-    const t = quill.getModule('toolbar');
-    const picker = t.container.querySelector('.ql-size.ql-picker');
-    if (picker) {
-        // Finde die "normal"-Option
-        const normalOption = picker.querySelector('.ql-picker-item[data-value="normal"]');
-        if (normalOption) {
-            normalOption.click();
+    let hasFirstInput = false;
+    quill.on('text-change', function (delta, oldDelta, source) {
+        if (!hasFirstInput && quill.getLength() > 1) {
+            // Nur, wenn etwas geschrieben wurde und noch keine Größe gesetzt ist
+            const range = quill.getSelection();
+            if (range) {
+                quill.formatText(0, quill.getLength(), {size: 'normal'}, 'user');
+            }
+            hasFirstInput = true;
         }
-    }
+    });
 
     createEmojiPanel(quill);
     
