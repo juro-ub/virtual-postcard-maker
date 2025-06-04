@@ -221,49 +221,6 @@ button:hover {
   box-shadow: 0 0 0 3px rgba(224, 195, 163, 0.5);
 }
 
-#emoji-close-div {
-  z-index: 1 !important;
-  background: transparent !important;
-  pointer-events: none !important;
-}
-
-#emoji-close-div {
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: transparent;
-}
-
-.custom-emoji-close {
-    position: absolute;
-    top: 6px;
-    right: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #333;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    text-align: center;
-    line-height: 22px;
-    z-index: 10000;
-}
-
-.custom-emoji-close:hover {
-    background: #f8d7da;
-    color: #000;
-}
-
-.custom-emoji-close i {
-    font-size: 16px;
-    color: #444;
-}
-
 .ql-size-small {
     font-size: 20px;
 }

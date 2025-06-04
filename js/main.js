@@ -11,13 +11,11 @@ $(document).ready(function () {
                 [{ 'size': ['small', 'normal', 'large'] }],
                 ['bold', 'italic'],
                 [{'color': []}],
-                ['emoji']
             ],
-            "emoji-toolbar": true,
-            "emoji-textarea": false,
-            "emoji-shortname": true
         }
     });
+
+    createEmojiPanel(quill);
     
     // Finde die Size-Picker-Elemente
     const toolbar = document.querySelector('.ql-toolbar');
@@ -226,57 +224,6 @@ $(document).ready(function () {
             img.src = e.target.result;
         };
         reader.readAsDataURL(file);
-    });
-    
-    /*
-     * 
-     * Kleine Hacks für das Emoji Menü in Quill
-     **/
-    
-    function injectEmojiCloseButton() {
-        const palette = document.getElementById('emoji-palette');
-
-        if (!palette || palette.querySelector('.custom-emoji-close'))
-            return;
-        
-        const closeBtn = document.createElement('div');
-        closeBtn.className = 'custom-emoji-close';
-        closeBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        closeBtn.title = 'Emoji-Menü schließen';
-
-        closeBtn.addEventListener('click', () => {
-            document.querySelector('.ql-emoji').click();
-        });
-
-        palette.appendChild(closeBtn);
-    }
-    
-    document.querySelector('.ql-emoji').addEventListener('click', () => {
-        setTimeout(injectEmojiCloseButton, 50); // Emoji-Palette wird leicht verzögert erzeugt
-    });
-
-    // Beobachte, ob Emoji-Menü geöffnet wird
-    $(document).on('click', '.ql-emoji', function () {
-        const closeDiv = document.getElementById('emoji-close-div');
-        if (closeDiv) {
-            closeDiv.style.pointerEvents = 'auto'; // Aktiviert Klick zum Schließen
-            closeDiv.style.zIndex = '9999';        // Liegt über Quill-Toolbar
-        }
-    });
-
-    $(document).on('click', function (e) {
-        const palette = document.getElementById('emoji-palette');
-
-        // Prüfen ob offen und Klick außerhalb
-        if (
-                palette &&
-                palette.style.display !== 'none' &&
-                !palette.contains(e.target) &&
-                !e.target.closest('.ql-emoji')
-                ) {
-            // Simuliere zweiten Klick auf das Emoji-Icon → schließt korrekt
-            document.querySelector('.ql-emoji').click();
-        }
     });
     
     //make .text-boxe draggable

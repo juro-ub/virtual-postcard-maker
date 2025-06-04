@@ -12,15 +12,15 @@ include './init.php';
         <link rel="stylesheet" href="<?= assetUrl('css/lib/quill_snow_1.3.7.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/main.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/mobile.css') ?>">
-        <link rel="stylesheet" href="<?= assetUrl('css/lib/quill-emoji_0.1.7.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/lib/font-awesome-6.5.0.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/emoji-panel.css') ?>">
 
         <script src="<?= assetUrl('js/lib/interact_1.10.27.min.js') ?>"></script>
         <script src="<?= assetUrl('js/lib/jquery-3.7.1.min.js') ?>"></script>
         <script src="<?= assetUrl('js/lib/quill_1.3.7.min.js') ?>"></script>
         <script src="<?= assetUrl('js/lib/html2canvas_1.4.1.min.js') ?>"></script>
-        <script src="<?= assetUrl('js/lib/quill-emoji_0.1.7.js') ?>"></script>
         <script src="<?= assetUrl('js/functions.js') ?>"></script>
+        <script src="<?= assetUrl('js/emoji-panel.js') ?>"></script>
         <script src="<?= assetUrl('js/main.js') ?>"></script>
 
     </head>
