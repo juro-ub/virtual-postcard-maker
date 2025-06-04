@@ -7,11 +7,27 @@ $(document).ready(function () {
     quill = new Quill('#editor', {
         theme: 'snow',
         modules: {
-            toolbar: [
-                [{ 'size': ['small', 'normal', 'large'] }],
-                ['bold', 'italic'],
-                [{'color': []}],
-            ],
+            toolbar: {
+                container: [
+                    [{'size': ['small', 'normal', 'large']}],
+                    ['bold', 'italic'],
+                    [{'color': []}]
+                ],
+                handlers: {
+                    'size': function (value) {
+                        const range = quill.getSelection();
+                        if (range == null)
+                            return;
+                        if (range.length === 0) {
+                            // Kein Text markiert: alles ändern
+                            quill.formatText(0, quill.getLength(), 'size', value);
+                        } else {
+                            // Nur Selektion ändern
+                            quill.format('size', value);
+                        }
+                    }
+                }
+            }
         }
     });
 
