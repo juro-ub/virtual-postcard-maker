@@ -10,13 +10,16 @@ include './init.php';
         <link rel="icon" type="image/png" href="<?= assetUrl('assets/favicon.png') ?>">
 
         <link rel="stylesheet" href="<?= assetUrl('css/lib/quill.snow.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/lib/bootstrap.min.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/main.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/mobile.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/lib/all.min.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/emoji-panel.css') ?>">
         <link rel="stylesheet" href="<?= assetUrl('css/lib/cropper.min.css') ?>">
+        <link rel="stylesheet" href="<?= assetUrl('css/modal.css') ?>">
 
         <script src="<?= assetUrl('js/lib/interact.min.js') ?>"></script>
+        <script src="<?= assetUrl('js/lib/bootstrap.bundle.min.js') ?>"></script>
         <script src="<?= assetUrl('js/lib/cropper.min.js') ?>"></script>
         <script src="<?= assetUrl('js/lib/jquery.min.js') ?>"></script>
         <script src="<?= assetUrl('js/lib/quill.min.js') ?>"></script>
@@ -24,43 +27,6 @@ include './init.php';
         <script src="<?= assetUrl('js/functions.js') ?>"></script>
         <script src="<?= assetUrl('js/emoji-panel.js') ?>"></script>
         <script src="<?= assetUrl('js/main.js') ?>"></script>
-  <style>
-    /* Einfaches natives Modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-      align-items: center;
-      justify-content: center;
-    }
-    .modal-overlay.active {
-      display: flex;
-    }
-    .modal-content {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      max-width: 90vw;
-      max-height: 90vh;
-      box-shadow: 0 2px 24px rgba(0,0,0,0.25);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .modal-content img {
-      max-width: 80vw;
-      max-height: 60vh;
-      margin-bottom: 1rem;
-    }
-    .modal-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-  </style>
     </head>
     <body>       
         <div class="card-wrapper">
