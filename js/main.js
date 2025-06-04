@@ -245,53 +245,90 @@ $(document).ready(function () {
         });
     });
     
-    // Eigenes Hintergrundbild
+    // Eigenes Hintergrundbild mit crop funktion
+    let cropper = null;
     const maxSizeMB = 7;
+    const targetWidth = 1200;
+    const targetHeight = 800;
 
-    $('#bg-upload').on('change', function (e) {
+    // Modal-Referenzen
+    const modal = document.getElementById('cropperModal');
+    const cropperImage = document.getElementById('bg-cropper-image');
+    const cropBtn = document.getElementById('crop-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
+    
+    function openModal() {
+        modal.classList.add('active');
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        if (cropper) {
+            cropper.destroy();
+            cropper = null;
+        }
+    }
+
+    document.getElementById('bg-upload').addEventListener('change', function (e) {
         const file = e.target.files[0];
         if (!file)
             return;
 
         if (file.size > maxSizeMB * 1024 * 1024) {
             alert(`Die Datei ist zu groß (${(file.size / 1024 / 1024).toFixed(2)} MB). Bitte wähle ein Bild unter ${maxSizeMB} MB.`);
-            $(this).val('');
+            this.value = ''; // Reset des File-Inputs
             return;
         }
 
         const reader = new FileReader();
         reader.onload = function (e) {
-            const img = new Image();
-            img.onload = function () {
-                const targetWidth = 1200;
-                const targetHeight = 800;
+            cropperImage.src = e.target.result;
 
-                const canvas = document.createElement('canvas');
-                canvas.width = targetWidth;
-                canvas.height = targetHeight;
-
-                const ctx = canvas.getContext('2d');
-                ctx.fillStyle = "#ffffff"; // Hintergrund (für z.B. transparente PNGs)
-                ctx.fillRect(0, 0, targetWidth, targetHeight);
-
-                // Bild einpassen (Seitenverhältnis beibehalten)
-                const scale = Math.min(targetWidth / img.width, targetHeight / img.height);
-                const newW = img.width * scale;
-                const newH = img.height * scale;
-                const offsetX = (targetWidth - newW) / 2;
-                const offsetY = (targetHeight - newH) / 2;
-
-                ctx.drawImage(img, offsetX, offsetY, newW, newH);
-
-                const dataUrl = canvas.toDataURL('image/jpeg', 0.9);
-                $('#bg-image').attr('src', dataUrl);
+            cropperImage.onload = function () {
+                // Cropper ggf. vorher zerstören
+                if (cropper)
+                    cropper.destroy();
+                cropper = new Cropper(cropperImage, {
+                    aspectRatio: targetWidth / targetHeight,
+                    viewMode: 1,
+                    autoCropArea: 1,
+                    movable: true,
+                    zoomable: true,
+                    scalable: false,
+                    rotatable: false
+                });
             };
-            img.src = e.target.result;
+
+            openModal();
         };
         reader.readAsDataURL(file);
     });
-    
-    //make .text-boxe draggable
+
+    // Crop übernehmen
+    cropBtn.addEventListener('click', function () {
+        if (!cropper)
+            return;
+        const canvas = cropper.getCroppedCanvas({
+            width: targetWidth,
+            height: targetHeight,
+            fillColor: '#fff',
+            imageSmoothingQuality: 'high'
+        });
+        document.getElementById('bg-image').src = canvas.toDataURL('image/jpeg', 0.9);
+        closeModal();
+    });
+
+    // Modal schließen (Abbrechen)
+    cancelBtn.addEventListener('click', function () {
+        closeModal();
+    });
+
+    // Modal auch mit Klick auf Overlay schließen
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal)
+            closeModal();
+    });
+    //make .text-box draggable
     interact('.text-box').draggable({
         listeners: {
             start(event) {

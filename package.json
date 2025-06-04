@@ -4,7 +4,7 @@
     "description": "Mit diesem Projekt kannst du eigene Postkarten direkt im Browser gestalten und teilen. Die Anwendung läuft komplett lokal im Browser, speichert keine Daten auf dem Server und funktioniert ohne Benutzerkonto.",
     "main": "index.js",
     "scripts": {
-        "copy-libs": "copyfiles -f node_modules/jquery/dist/jquery.min.js node_modules/quill/dist/quill.min.js node_modules/interactjs/dist/interact.min.js node_modules/html2canvas/dist/html2canvas.min.js js/lib/ && copyfiles -f node_modules/quill/dist/quill.snow.css node_modules/@fortawesome/fontawesome-free/css/all.min.css css/lib/ && copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* css/webfonts/",
+        "copy-libs": "copyfiles -f node_modules/jquery/dist/jquery.min.js node_modules/quill/dist/quill.min.js node_modules/interactjs/dist/interact.min.js node_modules/html2canvas/dist/html2canvas.min.js node_modules/cropperjs/dist/cropper.min.js js/lib/ && copyfiles -f node_modules/quill/dist/quill.snow.css node_modules/@fortawesome/fontawesome-free/css/all.min.css node_modules/cropperjs/dist/cropper.min.css css/lib/ && copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* css/webfonts/",
         "postinstall": "npm run copy-libs"
     },
     "repository": {
@@ -20,6 +20,7 @@
     "homepage": "https://github.com/juro-ub/virtual-postcard-maker#readme",
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.7.2",
+        "cropperjs": "^1.6.2",
         "html2canvas": "^1.4.1",
         "interactjs": "^1.10.27",
         "jquery": "^3.7.1",

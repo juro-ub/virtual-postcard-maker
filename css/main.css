@@ -93,30 +93,6 @@ select,
     margin-bottom: 20px; /* Abstand zu den Buttons */
 }
 
-button {
-    background: white;
-    border: 2px solid #444;
-    border-radius: 8px;
-    padding: 10px 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: bold;
-    transition: background 0.2s;
-}
-
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-button:hover {
-    background: #f0f0f0;
-}
-
 .text-box {
     position: absolute;
     padding: 10px;
@@ -204,19 +180,19 @@ button:hover {
     transform: translateY(-2px);
 }
 
-.btn-add {
+.btn-custom {
   background-color: #e0c3a3;  /* sanftes Apricot/Beige */
   color: #333;
   margin-top: 20px;
 }
 
-.btn-add:hover {
+.btn-custom:hover {
   background-color: #d4b48e;
   transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-add:focus {
+.btn-custom:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(224, 195, 163, 0.5);
 }
