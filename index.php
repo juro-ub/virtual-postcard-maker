@@ -34,11 +34,11 @@ include './init.php';
                         <div id="editor"></div>
                         <label for="bg-select-text">Text-Hintergrund:</label>
                         <select id="bg-select-text">
-                            <option value="transparent" selected>Kein Hintergrund</option>
-                            <option value="white">Weiß</option>
+                            <option value="rgba(0,0,0,0)">Kein Hintergrund</option>
+                            <option value="rgba(255,255,255,1)">Weiß</option>
                             <option value="rgba(255,255,255,0.8)">Weiß (transparent)</option>
                             <option value="rgba(0,0,0,0.5)">Dunkel (transparent)</option>
-                            <option value="#fdf6e3">Beige</option>
+                            <option value="rgba(253,246,227,1)">Beige</option>
                         </select>
                         
                         <label>Hintergrundbild auswählen:</label>

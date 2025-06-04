@@ -1,6 +1,7 @@
 let quill;
 $(document).ready(function () {
     let selectedBox = null;
+    let isSyncingBgSelect = false;
     const Size = Quill.import('formats/size');
     Size.whitelist = ['small', 'normal', 'large'];
     Quill.register(Size, true);
@@ -90,6 +91,27 @@ $(document).ready(function () {
 
         const html = $(selectedBox).find('.text-content').html();
         quill.root.innerHTML = html;
+        // === Hintergrundfarbe synchronisieren ===
+        // Hole den aktuellen Background-Color-Wert der Box
+        const bgColor = $(selectedBox).css('background-color');
+        let matchedValue = null;
+        $('#bg-select-text option').each(function () {
+            // Beide Strings ohne Leerzeichen vergleichen
+            const optVal = $(this).val().replace(/\s+/g, '');
+            const boxVal = bgColor.replace(/\s+/g, '');
+            if (
+                    optVal === boxVal ||
+                    (boxVal === "rgba(0,0,0,0)" && optVal === "transparent")
+                    ) {
+                matchedValue = $(this).val();
+                return false;
+            }
+        });
+        if (matchedValue !== null) {
+            $('#bg-select-text').val(matchedValue); // .change() NICHT aufrufen!
+        } else {
+            $('#bg-select-text').prop('selectedIndex', 0);
+        }
     });
     
     let textBoxCounter = 0;
@@ -145,8 +167,19 @@ $(document).ready(function () {
 
     $(document).on('click', function (e) {
         if ($(e.target).closest('.text-box, .editor-wrapper, .ql-toolbar, #editor').length === 0) {
-            // nur optisch abwählen, selectedBox-Referenz bleibt erhalten
+            // Vor dem Deselektieren: Quill-Inhalt in die (noch) selektierte Box schreiben
+            if (selectedBox) {
+                $(selectedBox).find('.text-content').html(quill.root.innerHTML);
+            }
+
+            //abwählen
             $('.text-box').removeClass('selected');
+            selectedBox = null;
+            // Quill-Inhalt löschen
+            quill.setText('');
+
+            //Text Select Background auf default zurücksetzen
+            $('#bg-select-text').prop('selectedIndex', 0).change();
         }
     });
     

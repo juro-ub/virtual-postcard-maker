@@ -5,3 +5,4 @@ function hideDeleteButtons() {
 function showDeleteButtons() {
     $('.delete-btn').show();
 }
+
