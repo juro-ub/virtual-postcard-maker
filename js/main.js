@@ -159,7 +159,7 @@ $(document).ready(function () {
 
     $('#print').click(() => {
         hideDeleteButtons();
-        html2canvas(document.querySelector('#postcard'), {useCORS: true,scale: 1.7}).then(canvas => {
+        html2canvas(document.querySelector('#postcard'), {useCORS: true}).then(canvas => {
             const dataUrl = canvas.toDataURL('image/png');
 
             const $form = $('<form>', {
