@@ -197,6 +197,11 @@ select,
   box-shadow: 0 0 0 3px rgba(224, 195, 163, 0.5);
 }
 
+.btn-select-bg{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
 .ql-size-small {
     font-size: 19px;
 }

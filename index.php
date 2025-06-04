@@ -89,7 +89,10 @@ include './init.php';
                         </select>
                         
                         <label for="bg-upload">Eigenes Hintergrundbild:</label>
-                        <input type="file" id="bg-upload" accept="image/*">
+                        <!-- Verstecktes File-Input -->
+                        <input type="file" id="bg-upload" accept="image/*" style="display:none;">
+                        <!-- Label als Button-Ersatz -->
+                        <label for="bg-upload" class="btn-social btn-custom btn-select-bg">Bild auswählen</label>
                         <p class="uploadHint">
                             📐 Optimale Größe: <strong>1200×800 Pixel</strong> (Querformat).
                         </p>
