@@ -15,6 +15,7 @@ Mit diesem Projekt kannst du eigene Postkarten direkt im Browser gestalten und t
 
 - HTML / CSS / JavaScript (Vanilla)
 - [npm](https://www.npmjs.com/) – für Verwaltung und Installation der Frontend-Bibliotheken
+- [Bootstrap](https://getbootstrap.com/) 5.3.6 – responsives CSS-Framework
 - [Cropper.js](https://fengyuanchen.github.io/cropperjs/) 1.x – intuitive Bild-Zuschnitt-UI
 - [Quill](https://quilljs.com/) 1.3.7 – moderner WYSIWYG-Texteditor
 - [interact.js](https://interactjs.io/) – Drag & Drop & Resize-Funktionalität
