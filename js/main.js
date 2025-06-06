@@ -172,7 +172,6 @@ $(document).ready(function () {
             if (selectedBox) {
                 $(selectedBox).find('.text-content').html(quill.root.innerHTML);
             }
-
             //abwählen
             $('.text-box').removeClass('selected');
             selectedBox = null;
