@@ -169,19 +169,21 @@ $(document).ready(function () {
     $(document).on('click', function (e) {
         if ($(e.target).closest('.text-box, .editor-wrapper, .ql-toolbar, #editor').length === 0) {
             // Vor dem Deselektieren: Quill-Inhalt in die (noch) selektierte Box schreiben
+            let isSelected = false;
             if (selectedBox) {
                 $(selectedBox).find('.text-content').html(quill.root.innerHTML);
+                isSelected = true;
             }
             //abwählen
             $('.text-box').removeClass('selected');
-            
-            if(selectedBox){
+            selectedBox = null;
+            if(isSelected){
                 // Quill-Inhalt löschen
                 quill.setText('');
             }
             //Text Select Background auf default zurücksetzen
             $('#bg-select-text').prop('selectedIndex', 0).change();
-            selectedBox = null;
+            
         }
     });
     
