@@ -174,12 +174,14 @@ $(document).ready(function () {
             }
             //abwählen
             $('.text-box').removeClass('selected');
-            selectedBox = null;
-            // Quill-Inhalt löschen
-            quill.setText('');
-
+            
+            if(selectedBox){
+                // Quill-Inhalt löschen
+                quill.setText('');
+            }
             //Text Select Background auf default zurücksetzen
             $('#bg-select-text').prop('selectedIndex', 0).change();
+            selectedBox = null;
         }
     });
     
