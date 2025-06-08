@@ -46,8 +46,8 @@ $(document).ready(function () {
         }
     });
 
-    createEmojiPanel(quill);
-    
+    //createEmojiPanel(quill);
+    loadEmojisAndCreatePanel(quill);
     // Finde die Size-Picker-Elemente
     const toolbar = document.querySelector('.ql-toolbar');
     toolbar.addEventListener('click', function (event) {
