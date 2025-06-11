@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <item key="title">Virtuelle Postkarte</item>
+    <item key="headline">Virtuelle Postkarte erstellen</item>
+    <item key="language">Sprache</item>
+    <item key="message">Nachricht:</item>
+    <item key="text_bg">Text-Hintergrund:</item>
+    <item key="bg_none">Kein Hintergrund</item>
+    <item key="bg_white">Weiß</item>
+    <item key="bg_white_trans">Weiß (transparent)</item>
+    <item key="bg_dark_trans">Dunkel (transparent)</item>
+    <item key="bg_beige">Beige</item>
+    <item key="bg_select_label">Hintergrundbild auswählen:</item>
+    <item key="bg_option_strand">Strand</item>
+    <item key="bg_option_geburtstag">Geburtstag</item>
+    <item key="bg_option_herzen">Herzen</item>
+    <item key="bg_option_katze">Katze</item>
+    <item key="bg_option_winter">Winter</item>
+    <item key="bg_own_label">Eigenes Hintergrundbild:</item>
+    <item key="upload_hint">📐Optimale Größe: 1200×800 Pixel (Querformat).</item>
+    <item key="crop_accept">Ausschnitt übernehmen</item>
+    <item key="crop_cancel">Abbrechen</item>
+    <item key="filter_select_label">Filter wählen:</item>
+    <item key="filter_none">Kein Filter</item>
+    <item key="filter_sepia">Sepia</item>
+    <item key="filter_brightness">Helligkeit +0.2</item>
+    <item key="filter_contrast">Kontrast +0.4</item>
+    <item key="filter_grayscale">Graustufen</item>
+    <item key="filter_blur">Weichzeichnen</item>
+    <item key="filter_huerotate">Farbton verschieben</item>
+    <item key="add_textbox">Textfeld hinzufügen</item>
+    <item key="download">Download</item>
+    <item key="print">Drucken</item>
+    <item key="privacy">Datenschutz</item>
+    <item key="imprint">Impressum</item>
+
+    <item key="imprint">Impressum</item>
+    <item key="imprint.law">Angaben gemäß § 5 TMG:</item>
+    <item key="imprint.country">Deutschland</item>
+    <item key="imprint.liability_content">Haftung für Inhalte</item>
+    <item key="imprint.liability_content_text">Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten verantwortlich. Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</item>
+    <item key="imprint.liability_links">Haftung für Links</item>
+    <item key="imprint.liability_links_text">Diese Seite enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen.</item>
+    <item key="imprint.copyright">Urheberrecht</item>
+    <item key="imprint.copyright_text">Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.</item>
+    <item key="imprint.back_home">Zurück zur Startseite</item>
+
+    <item key="privacy.title">Datenschutzerklärung</item>
+    <item key="privacy.intro">Wir nehmen den Schutz deiner persönlichen Daten sehr ernst. Diese Webseite dient ausschließlich der Erstellung und dem lokalen Druck von virtuellen Postkarten. Dabei gelten folgende Grundsätze:</item>
+    <item key="privacy.controller">Verantwortlich für die Datenverarbeitung</item>
+    <item key="privacy.country">Deutschland</item>
+    <item key="privacy.data_collected">Erhobene Daten</item>
+    <item key="privacy.data_collected_1">Beim Besuch der Webseite: IP-Adresse, Browsertyp, Uhrzeit und aufgerufene Seiten (durch Server-Logs, automatisch durch den Webserver)</item>
+    <item key="privacy.data_collected_2">Beim Erstellen einer Postkarte: Die Gestaltung erfolgt ausschließlich lokal im Browser. Es werden dabei keine Daten oder Bilder an den Server übertragen oder gespeichert.</item>
+    <item key="privacy.processing">Verarbeitung der Postkarten-Inhalte</item>
+    <item key="privacy.processing_text">Die erstellten Postkarten werden ausschließlich im Browser des Nutzers erzeugt. Sie können vom Nutzer gespeichert, gedruckt oder versendet werden, verbleiben jedoch auf dessen Gerät. Der Server speichert keine Inhalte, Bilder oder Texte, die in den Postkarten enthalten sind.</item>
+    <item key="privacy.disclosure">Weitergabe von Daten</item>
+    <item key="privacy.disclosure_text">Es erfolgt keine Weitergabe von Inhalten oder personenbezogenen Daten an Dritte, da diese nicht erhoben oder verarbeitet werden.</item>
+    <item key="privacy.rights">Deine Rechte</item>
+    <item key="privacy.rights_text">Da keine personenbezogenen Inhalte auf dem Server gespeichert oder verarbeitet werden, ist eine Umsetzung von Rechten wie Auskunft, Berichtigung oder Löschung im Sinne der DSGVO in Bezug auf Postkarteninhalte nicht erforderlich.</item>
+</translations>

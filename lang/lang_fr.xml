@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <item key="title">Carte postale virtuelle</item>
+    <item key="headline">Créer une carte postale virtuelle</item>
+    <item key="language">Langue</item>
+    <item key="message">Nouvelles:</item>
+    <item key="text_bg">Contexte du texte:</item>
+    <item key="bg_none">Pas de fond</item>
+    <item key="bg_white">Blanc</item>
+    <item key="bg_white_trans">Blanc (transparent)</item>
+    <item key="bg_dark_trans">Foncé (transparent)</item>
+    <item key="bg_beige">Beige</item>
+    <item key="bg_select_label">Sélectionnez l'image d'arrière-plan:</item>
+    <item key="bg_option_strand">Plage</item>
+    <item key="bg_option_geburtstag">Anniversaire</item>
+    <item key="bg_option_herzen">cœurs</item>
+    <item key="bg_option_katze">Chat</item>
+    <item key="bg_option_winter">Hiver</item>
+    <item key="bg_own_label">Image d'arrière-plan personnalisée:</item>
+    <item key="upload_hint">📐Taille optimale : 1200×800 pixels (format paysage).</item>
+    <item key="crop_accept">Adopter la section image</item>
+    <item key="crop_cancel">Annuler</item>
+    <item key="filter_select_label">Sélectionnez le filtre:</item>
+    <item key="filter_none">Pas de filtre</item>
+    <item key="filter_sepia">Sépia</item>
+    <item key="filter_brightness">Luminosité +0,2</item>
+    <item key="filter_contrast">Contraste +0,4</item>
+    <item key="filter_grayscale">Niveaux de gris</item>
+    <item key="filter_blur">Se brouiller</item>
+    <item key="filter_huerotate">Changer la teinte</item>
+    <item key="add_textbox">Ajouter un champ de texte</item>
+    <item key="download">Télécharger</item>
+    <item key="print">Presse</item>
+    <item key="privacy">Protection des données</item>
+    <item key="imprint">Imprimer</item>
+
+    <item key="imprint">Imprimer</item>
+    <item key="imprint.law">Informations conformément au § 5 TMG:</item>
+    <item key="imprint.country">Allemagne</item>
+    <item key="imprint.liability_content">Responsabilité du contenu</item>
+    <item key="imprint.liability_content_text">En tant que prestataire de services, je suis responsable de mes propres contenus sur ces pages, conformément à l'article 7 (1) de la loi allemande sur les télémédias (TMG). Toutefois, conformément aux articles 8 à 10 de la loi allemande sur les télémédias (TMG), je ne suis pas tenu de surveiller les informations tierces transmises ou stockées.</item>
+    <item key="imprint.liability_links">Responsabilité des liens</item>
+    <item key="imprint.liability_links_text">Ce site contient des liens vers des sites web tiers sur le contenu desquels je n'ai aucune influence. Par conséquent, je décline toute responsabilité quant à ces contenus externes.</item>
+    <item key="imprint.copyright">droits d'auteur</item>
+    <item key="imprint.copyright_text">Les contenus et œuvres de ces pages créés par l'exploitant du site sont soumis à la loi allemande sur le droit d'auteur.</item>
+    <item key="imprint.back_home">Retour à la page d'accueil</item>
+
+    <item key="privacy.title">politique de confidentialité</item>
+    <item key="privacy.intro">Nous prenons la protection de vos données personnelles très au sérieux. Ce site web est exclusivement destiné à la création et à l'impression locale de cartes postales virtuelles. Les principes suivants s'appliquent :</item>
+    <item key="privacy.controller">Responsable du traitement des données</item>
+    <item key="privacy.country">Allemagne</item>
+    <item key="privacy.data_collected">Données collectées</item>
+    <item key="privacy.data_collected_1">Lors de la visite du site Web : adresse IP, type de navigateur, heure et pages consultées (via les journaux du serveur, automatiquement par le serveur Web)</item>
+    <item key="privacy.data_collected_2">Lors de la création d'une carte postale : la conception est réalisée exclusivement en local dans le navigateur. Aucune donnée ni image n'est transférée ni enregistrée sur le serveur.</item>
+    <item key="privacy.processing">Traitement du contenu des cartes postales</item>
+    <item key="privacy.processing_text">Les cartes postales créées sont générées exclusivement dans le navigateur de l'utilisateur. Elles peuvent être enregistrées, imprimées ou envoyées par l'utilisateur, mais restent sur son appareil. Le serveur ne stocke aucun contenu, image ou texte des cartes postales.</item>
+    <item key="privacy.disclosure">Partage de données</item>
+    <item key="privacy.disclosure_text">Aucun contenu ni aucune donnée personnelle ne seront transmis à des tiers, car ils ne sont ni collectés ni traités.</item>
+    <item key="privacy.rights">Vos droits</item>
+    <item key="privacy.rights_text">Étant donné qu'aucun contenu personnel n'est stocké ou traité sur le serveur, la mise en œuvre de droits tels que l'information, la correction ou la suppression au sens du RGPD concernant le contenu des cartes postales n'est pas nécessaire.</item>
+</translations>

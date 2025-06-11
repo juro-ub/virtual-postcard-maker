@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <item key="title">Postal virtual</item>
+    <item key="headline">Crea una postal virtual</item>
+    <item key="language">Idioma</item>
+    <item key="message">Noticias</item>
+    <item key="text_bg">Fondo del texto</item>
+    <item key="bg_none">Sin antecedentes</item>
+    <item key="bg_white">Blanca</item>
+    <item key="bg_white_trans">Blanco (transparente)</item>
+    <item key="bg_dark_trans">Oscuro (transparente)</item>
+    <item key="bg_beige">Beige</item>
+    <item key="bg_select_label">Seleccionar imagen de fondo:</item>
+    <item key="bg_option_strand">Playa</item>
+    <item key="bg_option_geburtstag">Cumpleaños</item>
+    <item key="bg_option_herzen">Copas</item>
+    <item key="bg_option_katze">Gato</item>
+    <item key="bg_option_winter">Invierno</item>
+    <item key="bg_own_label">Imagen de fondo personalizada:</item>
+    <item key="upload_hint">📐Tamaño óptimo: 1200×800 píxeles (formato horizontal).</item>
+    <item key="crop_accept">Sección Adoptar imagen</item>
+    <item key="crop_cancel">Cancelar</item>
+    <item key="filter_select_label">Seleccionar filtro:</item>
+    <item key="filter_none">Sin filtro</item>
+    <item key="filter_sepia">Sepia</item>
+    <item key="filter_brightness">Brillo +0,2</item>
+    <item key="filter_contrast">Contraste +0,4</item>
+    <item key="filter_grayscale">Escala de grises</item>
+    <item key="filter_blur">Difuminar</item>
+    <item key="filter_huerotate">Cambiar tono</item>
+    <item key="add_textbox">Agregar campo de texto</item>
+    <item key="download">Download</item>
+    <item key="print">Prensa</item>
+    <item key="privacy">Protección de datos</item>
+    <item key="imprint">Imprimir</item>
+
+    <item key="imprint">Aviso legal</item>
+    <item key="imprint.law">Información según § 5 TMG:</item>
+    <item key="imprint.country">Alemania</item>
+    <item key="imprint.liability_content">Responsabilidad por el contenido</item>
+    <item key="imprint.liability_content_text">Como proveedor de servicios, soy responsable de mis propios contenidos en estas páginas de acuerdo con el § 7 (1) de la Ley Alemana de Medios Televisivos (TMG). Sin embargo, según los §§ 8 a 10 de la TMG, no estoy obligado a supervisar la información transmitida o almacenada de terceros.</item>
+    <item key="imprint.liability_links">Responsabilidad por los enlaces</item>
+    <item key="imprint.liability_links_text">Este sitio contiene enlaces a sitios web externos de terceros sobre cuyos contenidos no tengo ninguna influencia. Por lo tanto, no puedo asumir ninguna responsabilidad por estos contenidos externos.</item>
+    <item key="imprint.copyright">Derechos de autor</item>
+    <item key="imprint.copyright_text">Los contenidos y obras creados por el operador de este sitio en estas páginas están sujetos a la ley alemana de derechos de autor.</item>
+    <item key="imprint.back_home">Volver a la página principal</item>
+
+    <item key="privacy.title">Política de privacidad</item>
+    <item key="privacy.intro">Nos tomamos muy en serio la protección de tus datos personales. Este sitio web se utiliza exclusivamente para la creación y la impresión local de postales virtuales. Se aplican los siguientes principios:</item>
+    <item key="privacy.controller">Responsable del tratamiento de datos</item>
+    <item key="privacy.country">Alemania</item>
+    <item key="privacy.data_collected">Datos recogidos</item>
+    <item key="privacy.data_collected_1">Al visitar el sitio web: dirección IP, tipo de navegador, hora y páginas visitadas (a través de los registros del servidor, automáticamente por el servidor web)</item>
+    <item key="privacy.data_collected_2">Al crear una postal: El diseño se realiza exclusivamente de forma local en el navegador. No se transfieren ni se guardan datos ni imágenes en el servidor.</item>
+    <item key="privacy.processing">Procesamiento del contenido de las postales</item>
+    <item key="privacy.processing_text">Las postales creadas se generan exclusivamente en el navegador del usuario. El usuario puede guardarlas, imprimirlas o enviarlas, pero permanecen en su dispositivo. El servidor no almacena ningún contenido, imagen o texto contenido en las postales.</item>
+    <item key="privacy.disclosure">Divulgación de datos</item>
+    <item key="privacy.disclosure_text">No se transmiten contenidos ni datos personales a terceros, ya que no se recopilan ni procesan.</item>
+    <item key="privacy.rights">Tus derechos</item>
+    <item key="privacy.rights_text">Dado que no se almacenan ni procesan contenidos personales en el servidor, no es necesaria la aplicación de derechos como información, corrección o eliminación en el sentido del RGPD con respecto al contenido de las postales.</item>
+</translations>

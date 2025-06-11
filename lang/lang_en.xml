@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <item key="title">Virtual Postcard</item>
+    <item key="headline">Virtual Postcard Maker</item>
+    <item key="language">Language</item>
+    <item key="message">Message:</item>
+    <item key="text_bg">Text-Background:</item>
+    <item key="bg_none">None</item>
+    <item key="bg_white">White</item>
+    <item key="bg_white_trans">White (transparent)</item>
+    <item key="bg_dark_trans">Dark (transparent)</item>
+    <item key="bg_beige">Beige</item>
+    <item key="bg_select_label">Choose background-image:</item>
+    <item key="bg_option_strand">Beach</item>
+    <item key="bg_option_geburtstag">Birthday</item>
+    <item key="bg_option_herzen">Hearts</item>
+    <item key="bg_option_katze">Cat</item>
+    <item key="bg_option_winter">Winter</item>
+    <item key="bg_own_label">Custom background-image:</item>
+    <item key="upload_hint">📐Size: 1200×800 Pixel (landscape).</item>
+    <item key="crop_accept">Crop image</item>
+    <item key="crop_cancel">Cancel</item>
+    <item key="filter_select_label">Choose filter:</item>
+    <item key="filter_none">None</item>
+    <item key="filter_sepia">Sepia</item>
+    <item key="filter_brightness">Brightness +0.2</item>
+    <item key="filter_contrast">Contrast +0.4</item>
+    <item key="filter_grayscale">Grayscale</item>
+    <item key="filter_blur">Blur</item>
+    <item key="filter_huerotate">Huerotate</item>
+    <item key="add_textbox">Add textfield</item>
+    <item key="download">Download</item>
+    <item key="print">Print</item>
+    <item key="privacy">Privacy</item>
+    <item key="imprint">Imprint</item>
+
+    <item key="imprint">Imprint</item>
+    <item key="imprint.law">Information according to § 5 TMG:</item>
+    <item key="imprint.country">Germany</item>
+    <item key="imprint.liability_content">Contenu</item>
+    <item key="imprint.liability_content_text">As a service provider, I am responsible for my own content on these pages in accordance with Section 7 (1) of the German Telemedia Act (TMG). However, according to Sections 8 to 10 of the German Telemedia Act (TMG), I am not obligated to monitor transmitted or stored third-party information.</item>
+    <item key="imprint.liability_links">Liability for links</item>
+    <item key="imprint.liability_links_text">This site contains links to external third-party websites over whose content I have no influence. Therefore, I cannot accept any liability for this external content.</item>
+    <item key="imprint.copyright">Copyright</item>
+    <item key="imprint.copyright_text">The contents and works on these pages created by the site operator are subject to German copyright law.</item>
+    <item key="imprint.back_home">Back to homepage</item>
+
+    <item key="privacy.title">Privacy Policy</item>
+    <item key="privacy.intro">We take the protection of your personal data very seriously. This website is used exclusively for the creation and local printing of virtual postcards. The following principles apply:</item>
+    <item key="privacy.controller">Responsible for data processing</item>
+    <item key="privacy.country">Germany</item>
+    <item key="privacy.data_collected">Data collected</item>
+    <item key="privacy.data_collected_1">When visiting the website: IP address, browser type, time and pages accessed (via server logs, automatically by the web server)</item>
+    <item key="privacy.data_collected_2">When creating a postcard: The design is done exclusively locally in the browser. No data or images are transferred or saved to the server.</item>
+    <item key="privacy.processing">Processing of postcard contents</item>
+    <item key="privacy.processing_text">The created postcards are generated exclusively in the user's browser. They can be saved, printed, or sent by the user, but remain on their device. The server does not store any content, images, or text contained in the postcards.</item>
+    <item key="privacy.disclosure">Sharing of data</item>
+    <item key="privacy.disclosure_text">No content or personal data will be passed on to third parties, as they are not collected or processed.</item>
+    <item key="privacy.rights">Your rights</item>
+    <item key="privacy.rights_text">Since no personal content is stored or processed on the server, the implementation of rights such as information, correction or deletion within the meaning of the GDPR with regard to postcard content is not necessary.</item>
+</translations>

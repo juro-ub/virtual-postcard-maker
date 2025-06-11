@@ -166,3 +166,30 @@ footer {
     padding: 20px;
     font-size: 0.9em;
 }
+
+.lang-flagbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0 26px 0;
+    gap: 18px;
+}
+.lang-flag {
+    font-size: 2.3rem;
+    text-decoration: none;
+    transition: transform 0.18s, box-shadow 0.18s;
+    padding: 0.05em 0.16em;
+    border-radius: 8px;
+    color: #333;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.lang-flag:hover,
+.lang-flag.active {
+    background: rgba(253, 250, 246, 0.95);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: scale(1.13);
+    color: #111;
+}
