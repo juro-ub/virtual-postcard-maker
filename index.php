@@ -64,6 +64,7 @@ include './init.php';
                             <option value="herzen_1200x800.jpg"><?= t('bg_option_herzen') ?></option>
                             <option value="katze_1200x800.jpg"><?= t('bg_option_katze') ?></option>
                             <option value="winter_1200x800.jpg"><?= t('bg_option_winter') ?></option>
+                            <option value="city_1200x800.jpg"><?= t('bg_option_city') ?></option>
                         </select>
                         
                         <label for="bg-upload"><?= t('bg_own_label') ?></label>
