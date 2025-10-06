@@ -17,6 +17,7 @@
     <item key="bg_option_herzen">cœurs</item>
     <item key="bg_option_katze">Chat</item>
     <item key="bg_option_winter">Hiver</item>
+    <item key="bg_option_ski">Ski</item>
     <item key="bg_own_label">Image d'arrière-plan personnalisée:</item>
     <item key="upload_hint">📐Taille optimale : 1200×800 pixels (format paysage).</item>
     <item key="crop_accept">Adopter la section image</item>

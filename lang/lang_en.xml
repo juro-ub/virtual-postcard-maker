@@ -17,6 +17,7 @@
     <item key="bg_option_herzen">Hearts</item>
     <item key="bg_option_katze">Cat</item>
     <item key="bg_option_winter">Winter</item>
+    <item key="bg_option_ski">Ski</item>
     <item key="bg_own_label">Custom background-image:</item>
     <item key="upload_hint">📐Size: 1200×800 Pixel (landscape).</item>
     <item key="crop_accept">Crop image</item>

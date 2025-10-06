@@ -17,6 +17,7 @@
     <item key="bg_option_city">Ciudad</item>
     <item key="bg_option_katze">Gato</item>
     <item key="bg_option_winter">Invierno</item>
+    <item key="bg_option_ski">Esquí</item>
     <item key="bg_own_label">Imagen de fondo personalizada:</item>
     <item key="upload_hint">📐Tamaño óptimo: 1200×800 píxeles (formato horizontal).</item>
     <item key="crop_accept">Sección Adoptar imagen</item>
