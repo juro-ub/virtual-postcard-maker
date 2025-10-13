@@ -10,9 +10,11 @@ body {
 }
 
 .card-wrapper {
+    position: relative;  /* notwendig für absolute Positionierung der Icons */
     max-width: 1500px;
     margin: 40px auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -192,4 +194,66 @@ footer {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transform: scale(1.13);
     color: #111;
+}
+
+/* Icons */
+.icon-png {
+    position: absolute;
+    width: 64px;
+    height: auto;
+    opacity: 0.9;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Positionen um die Karte */
+.icon-top {
+    top: -0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-bottom {
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-left {
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-right {
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Eckpositionen */
+.icon-topleft {
+    top: -40px;
+    left: -60px;
+}
+
+.icon-topright {
+    top: -40px;
+    right: -60px;
+}
+
+.icon-bottomleft {
+    bottom: -40px;
+    left: -60px;
+}
+
+.icon-bottomright {
+    bottom: -40px;
+    right: -60px;
+}
+
+.icon-heart {
+    width: 200px;
+    height: 151px;
+    position: relative;
 }
