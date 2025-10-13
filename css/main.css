@@ -233,7 +233,7 @@ footer {
 
 /* Eckpositionen */
 .icon-topleft {
-    top: -40px;
+    top: 60px;
     left: -60px;
 }
 
@@ -255,5 +255,11 @@ footer {
 .icon-heart {
     width: 200px;
     height: 151px;
+    position: relative;
+}
+
+.icon-flower {
+    width: 150px;
+    height: 150px;
     position: relative;
 }
