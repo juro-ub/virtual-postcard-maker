@@ -28,6 +28,8 @@ Mit diesem Projekt kannst du eigene Postkarten direkt im Browser gestalten und t
 
 - Node.js (empfohlen: aktuelle LTS-Version)
 - npm (Node Package Manager)
+- PHP 8.3
+    - zusätzlich: sudo apt install php-xml
 - Apache-Webserver mit Unterstützung für Virtual Hosts
 - Git (optional, für den Projekt-Download)
 
