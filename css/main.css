@@ -214,20 +214,21 @@ footer {
 }
 
 .icon-bottom {
-    bottom: -40px;
-    left: 50%;
+    bottom: -1150px;
+    left: 500px;
     transform: translateX(-50%);
 }
 
 .icon-left {
-    left: -70px;
-    top: 50%;
+    right: 300px;
+    top: 500px;
     transform: translateY(-50%);
+    z-index: 1000;
 }
 
 .icon-right {
-    right: -70px;
-    top: 50%;
+    right: -1200px;
+    top: 700px;
     transform: translateY(-50%);
 }
 
@@ -238,17 +239,18 @@ footer {
 }
 
 .icon-topright {
-    top: -40px;
-    right: -60px;
+    top: 50px;
+    right: -500px;
 }
 
 .icon-bottomleft {
-    bottom: -40px;
-    left: -60px;
+    bottom: -1110px;
+    left: -350px;
+    z-index: 1000;
 }
 
 .icon-bottomright {
-    bottom: -40px;
+    bottom: -1150px;
     right: -60px;
 }
 
@@ -258,8 +260,46 @@ footer {
     position: relative;
 }
 
+.icon-shell {
+    width: 200px;
+    position: relative;
+    z-index: 1000;
+}
+
+
+.icon-star {
+    width: 150px;
+    position: relative;
+    z-index: 1000;
+}
+
+.icon-sun {
+    width: 150px;
+    z-index: -1000;
+    position: relative;
+}
+
 .icon-flower {
     width: 150px;
     height: 150px;
     position: relative;
 }
+
+.icon-leaf {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.icon-butterfly {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.icon-moon {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+

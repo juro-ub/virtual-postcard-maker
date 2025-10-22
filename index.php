@@ -35,15 +35,15 @@ include './init.php';
     <div class="card-wrapper">
         <!-- Icons rund um die Karte -->
         <img src="assets/icons/heart.png" class="icon-png icon-top icon-heart" alt="Oben">
-        <img src="assets/icons/star.png" class="icon-png icon-right" alt="Rechts">
-        <img src="assets/icons/sun.png" class="icon-png icon-bottom" alt="Unten">
-        <img src="assets/icons/moon.png" class="icon-png icon-left" alt="Links">
+        <img src="assets/icons/star.png" class="icon-png icon-right icon-star" alt="Rechts">
+        <img src="assets/icons/sun.png" class="icon-png icon-bottom icon-sun" alt="Unten">
+        <img src="assets/icons/moon.png" class="icon-png icon-left icon-moon" alt="Links">
 
           <!-- Icons in den Ecken -->
         <img src="assets/icons/flower.png" class="icon-png icon-topleft icon-flower" alt="Ecke oben links">
-        <img src="assets/icons/butterfly.png" class="icon-png icon-topright" alt="Ecke oben rechts">
-        <img src="assets/icons/leaf.png" class="icon-png icon-bottomleft" alt="Ecke unten links">
-        <img src="assets/icons/shell.png" class="icon-png icon-bottomright" alt="Ecke unten rechts">
+        <img src="assets/icons/butterfly.png" class="icon-png icon-topright icon-butterfly" alt="Ecke oben rechts">
+        <img src="assets/icons/leaf.png" class="icon-png icon-bottomleft icon-leaf " alt="Ecke unten links">
+        <img src="assets/icons/shell.png" class="icon-png icon-bottomright icon-shell" alt="Ecke unten rechts">
 
 
         <h1><?= t('headline') ?></h1>
