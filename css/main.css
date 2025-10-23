@@ -211,17 +211,19 @@ footer {
     top: -0px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000;
 }
 
 .icon-bottom {
-    bottom: -1150px;
-    left: 500px;
+    bottom: -1200px;
+    left: 360px;
     transform: translateX(-50%);
+    z-index: 1000;
 }
 
 .icon-left {
-    right: 300px;
-    top: 500px;
+    left: -620px;
+    top: 700px;
     transform: translateY(-50%);
     z-index: 1000;
 }
@@ -230,22 +232,25 @@ footer {
     right: -1200px;
     top: 700px;
     transform: translateY(-50%);
+    z-index: 1000;
 }
 
 /* Eckpositionen */
 .icon-topleft {
-    top: 60px;
-    left: -60px;
+    top: 200px;
+    left: -620px;
+    z-index: 1000;
 }
 
 .icon-topright {
-    top: 50px;
-    right: -500px;
+    top: 200px;
+    right: -400px;
+    z-index: 1000;
 }
 
 .icon-bottomleft {
-    bottom: -1110px;
-    left: -350px;
+    bottom: -1159px;
+    left: -890px;
     z-index: 1000;
 }
 
